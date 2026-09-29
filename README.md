@@ -4,8 +4,9 @@ A digital edition of the **Smṛti-kaustubha** of Anantadeva (son of Āpadeva), 
 dharmaśāstra digest (*nibandha*) on tithi-nirṇaya and the observances of the year, month by month.
 Part of the [StotraSamhita](https://github.com/stotrasamhita) family of Sanskrit-text projects.
 
-> 🚧 **Work in progress.** The repository holds the raw OCR text and the project spec. The structured text,
-> the website and the PDF are being built. See [`docs/spec.md`](docs/spec.md).
+> 🚧 **Work in progress: Phase 0 pilot.** The Caitra-kṛtyam (printed pp.85–108) is structured, tagged and
+> published as a website and a PDF, **but not yet proof-read against the page images**. See
+> [`docs/pilot-report.md`](docs/pilot-report.md) and [`docs/spec.md`](docs/spec.md).
 
 ## Goals
 
@@ -34,7 +35,7 @@ Both outputs are generated from the same master text.
 |---|---|---|
 | प्रास्ताविकम् (editor's introduction) and विषयानुक्रमः (topic list) | 5–16 | OCR only |
 | तिथिदीधितिः | 1–82 | OCR only |
-| संवत्सरदीधितिः | 83–580 | OCR only |
+| संवत्सरदीधितिः | 83–580 | pp.85–108 (Caitra-kṛtyam) cleaned and tagged; rest OCR only |
 | आशौचदीधितिः | 581–596 | OCR only |
 | काशीस्थपुस्तकशुद्धपाठान्तराणि (variant readings) | appendix | OCR only |
 
@@ -45,10 +46,24 @@ Both outputs are generated from the same master text.
 | [`docs/spec.md`](docs/spec.md) | Project spec: text model, pipeline, website, PDF, indices, phases |
 | [`docs/ocr-errors.md`](docs/ocr-errors.md) | Recurring OCR errors and known page-specific corrections |
 | [`source/`](source/) | Raw inputs, never edited by hand (see [`source/README.md`](source/README.md)) |
-| `content/` | *(Phase 0)* The structured master text, one Markdown file per topic |
-| `data/` | *(Phase 0)* Authority lists: cited sources, festivals, glossary, page concordance |
-| `pdf/` | *(Phase 0)* Pandoc filter and LuaLaTeX class for the PDF |
-| `tools/` | *(Phase 1)* OCR, cleanup, tagging and validation scripts |
+| `content/` | The structured master text, one Markdown file per topic (Caitra-kṛtyam so far) |
+| `data/` | Authority lists: `sources.toml` (cited works), `pages.toml` (page concordance, generated) |
+| `docs/proofreading/` | Generated checklists of every correction and doubtful reading, by printed page |
+| `pdf/` | Pandoc Lua filter and LuaLaTeX template for the PDF ([`pdf/README.md`](pdf/README.md)) |
+| `tools/` | Page extraction, validation, PDF build, page concordance and checklist scripts |
+| `layouts/`, `static/`, `assets/`, `hugo.toml` | The Hugo site (theme: `themes/hugo-book`, a git submodule) |
+
+## Building
+
+```sh
+git submodule update --init           # hugo-book theme
+python3 tools/validate.py             # page markers, IDs, shortcodes, source IDs
+make pdf                              # build/pdf/sk-caitra-pilot.pdf (pandoc + LuaLaTeX)
+make site && hugo server              # site with Pagefind search (Hugo ≥ 0.158 extended)
+```
+
+CI (`.github/workflows/build.yml`) runs the same steps and publishes the site, with the PDF under `/pdf/`,
+to GitHub Pages from `main`.
 
 ## Roadmap
 

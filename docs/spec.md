@@ -1,6 +1,6 @@
 # Smṛti-Kaustubha Digital Edition: Spec
 
-Status: draft, 2026-09-29. Open questions are listed in §9.
+Status: draft, 2026-09-29; §4 updated with the Phase 0 pilot decisions. Open questions are listed in §9.
 
 ## 1. Goals and non-goals
 
@@ -104,16 +104,26 @@ from it unchanged. TEI stays an export.
 | Dīdhiti | Top-level folder | `sk.<d>` (`t`, `s`, `a`) | `sk.s` |
 | Topic (prakaraṇa) | One `.md` file; heading = printed topic title | `sk.<d>.<slug>` | `sk.s.damanaka-utsavah` |
 | Printed page | `{{< pg 87 >}}` at the exact break, even mid-sentence | `p87` | `#p87` |
-| Paragraph | Blank line; numbered within its printed page | `p87.3` | `#p87.3` |
-| Verse | `{{< shloka >}}` block, one line per half-verse, daṇḍa kept | `p87.v2` | `#p87.v2` |
+| Paragraph | Blank line, then an explicit `{#p87.3}` line after it; numbered within the printed page it starts on | `p87.3` | `#p87.3` |
+| Verse | `{{< shloka id="p87.v2" >}}` block, one line per half-verse, daṇḍa kept | `p87.v2` | `#p87.v2` |
 | Quotation | `{{< q src="bhavishya" >}}…{{< /q >}}` | from its paragraph or verse | – |
 | Correction | `{{< corr ocr="सात्वा" >}}स्नात्वा{{< /corr >}}`, a fix the scan supports | – | – |
 | Emendation | `{{< em print="…" >}}…{{< /em >}}`, when the 1931 print itself is wrong | – | footnote |
 | Variant | `{{< var src="kashi" >}}…{{< /var >}}` from the pāṭhāntara pages | – | footnote with page/line |
+| 1931 footnote | `{{< fn >}}…इति पाठः{{< /fn >}}` after its lemma: the edition's own notes | – | numbered footnote |
+| Margin heading | `{{< mn >}}नागपूजा ।{{< /mn >}}`: a side-heading printed in the 1931 margin | – | margin note |
+| Doubtful reading | `[?]` after the word, until someone checks the page image | – | red `[?]` |
 | Figure | `{{< fig "kunda-chaturasra" >}}`, redrawn as SVG | `fig.<slug>` | – |
 
 IDs are tied to the printed page, so "SK p.87" and `…/damanaka-utsavah/#p87.3` point to the same place in print and
-on the web. A validation script fails the build on a duplicate ID or a missing page marker.
+on the web. A validation script (`tools/validate.py`) fails the build on a duplicate ID or a missing page marker.
+
+Paragraph IDs are written into the file rather than counted at build time, so splitting or merging a paragraph
+later cannot silently renumber the others. Because a printed page can span two topic files, the numbering
+carries across files in reading order (e.g. `p101.1`–`p101.2` in one file, `p101.3` in the next). A `q` tag may
+name several intermediaries: `via="nirnayamrta hemadri"`. The `sources` list in the front matter is derived from
+the tags (`tools/validate.py --fix-sources`). `tithis` run 1–30 through the amānta month: 1–15 śukla (15 =
+pūrṇimā), 16–29 kṛṣṇa, 30 = amāvāsyā. File names carry a sort prefix (`08-damanakotsavah.md`); URLs use `slug`.
 
 Front matter per topic file:
 
@@ -278,3 +288,8 @@ processing the rest.
 - [ ] Tamil rendering: Grantha-mixed or superscript numbers by default?
 - [ ] English topic summaries in v1.0, or only after?
 - [ ] Master format: Markdown + shortcodes (assumed here) or TEI/XML?
+- [ ] Run-in verses: most quoted verses are printed as running prose. The pilot tags them only as quotations
+  (`q`); only verses the 1931 edition sets apart are `shloka` blocks. Should the edition set quoted verses apart
+  (changes the look against the 1931 page, but makes the verse-pāda index complete)?
+- [ ] Apparatus: the pilot keys series A by lemma (259 notes on 24 pages). Line numbers (reledmac) or lemma only?
+- [ ] adyatithi IDs for the pilot topics (`adyatithi = []` for now): to be filled by the adyatithi maintainers.

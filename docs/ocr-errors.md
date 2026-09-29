@@ -79,3 +79,18 @@ the result is a real word in context.
 Scan 300 (p.283), scan 460–461 (ardhodaya vrata aṅga lists), scan 478–491 (kuṇḍa geometry and tables), scan 557 (mantras),
 scan 614–617 (pāṭhāntara appendix: needed for the variant-reading apparatus).
 
+
+## Found in the Phase 0 pilot (Caitra-kṛtyam, pp.85–108)
+Structural problems, beyond the word-level errors above:
+- **Margin side-headings are interleaved with the text**, sometimes split across lines: "सूर्यस्य दः … मनकपूजा।"
+  on p.94 is the side-heading सूर्यस्य दमनकपूजा wrapped round a text line. They are now `{{< mn >}}` tags.
+- **Footnote markers are lost** in the text (only the notes at the foot survive), so where each 1931 footnote
+  attaches has been inferred from its reading; unsure placements carry `[?]` inside the note.
+- **Displaced lines**: on p.88 the word "समपद्यत ।" is read at the top of the page, but it belongs after "रौरवः"
+  eight lines down (the metre needs it there). Look for short orphan lines at page tops.
+- Left-hand (even) pages usually lose their printed page number; the scan offset was a constant 19 over pp.85–108.
+- A trailing "-" at a line end is either a hyphen or the dash that opens a quotation; the extractor keeps both
+  as `‹-›` for a human to decide.
+- Anusvāra on य/र्य is regularly dropped (कार्य for कार्यं), and "पूर्वविद्वैव" for पूर्वविद्धैव.
+- p.107: metre (upajāti, 11 syllables) favours "गङ्गाजलेऽर्कग्रहकोटितुल्या" over the "ग्रहकोटि" suggested above;
+  both are marked `[?]` in the text.

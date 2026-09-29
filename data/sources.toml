@@ -1,0 +1,238 @@
+# Authority list of cited works and authors (spec §4). Keys are the IDs used in
+# {{< q src="…" via="…" >}}. `seen` lists the spellings met in the text, for the tagger.
+# type: purana | upapurana | itihasa | smrti | sutra | nibandha | agama | samhita | jyotisa
+# Seeded from the Caitra-krtyam pilot (pp.85–108); about 250 entries are expected in all.
+
+[agastya-samhita]
+name = "अगस्त्यसंहिता"
+iast = "Agastya-saṃhitā"
+type = "samhita"
+seen = ["अगस्तिसंहितायां", "अगस्तिसंहितावचोभ्याम्"]
+
+[apararka]
+name = "अपरार्कः"
+iast = "Aparārka"
+type = "nibandha"
+seen = ["अपरा[र्के] (OCR, p.89)"]
+note = "Attribution reconstructed from a truncated OCR word on p.89; check the page."
+
+[apastamba]
+name = "आपस्तम्बः"
+iast = "Āpastamba"
+type = "smrti"
+seen = ["आपस्तम्बवाक्येन"]
+
+[baudhayana]
+name = "बौधायनः"
+iast = "Baudhāyana"
+type = "smrti"
+seen = ["बौधायनोक्तेः", "बौधायनीयवाक्य"]
+
+[bhavishya]
+name = "भविष्यपुराणम्"
+iast = "Bhaviṣya-purāṇa"
+type = "purana"
+seen = ["भविष्ये"]
+
+[bhavishyottara]
+name = "भविष्योत्तरपुराणम्"
+iast = "Bhaviṣyottara-purāṇa"
+type = "purana"
+seen = ["भविष्योत्तरे"]
+
+[brahma-purana]
+name = "ब्रह्मपुराणम्"
+iast = "Brahma-purāṇa"
+type = "purana"
+seen = ["ब्रह्मपुराणवचनात्", "ब्राह्मे", "ब्राझे (OCR)", "ब्राह्ये (OCR)", "ब्राह्मवचनात्"]
+
+[brahma-vaivarta]
+name = "ब्रह्मवैवर्तपुराणम्"
+iast = "Brahmavaivarta-purāṇa"
+type = "purana"
+seen = ["ब्रह्मवैवर्तवचसः"]
+
+[brahmanda-purana]
+name = "ब्रह्माण्डपुराणम्"
+iast = "Brahmāṇḍa-purāṇa"
+type = "purana"
+seen = ["ब्रह्माण्डे"]
+
+[devi-purana]
+name = "देवीपुराणम्"
+iast = "Devī-purāṇa"
+type = "upapurana"
+seen = ["देवीपुराणे"]
+
+[dipika]
+name = "दीपिका"
+iast = "Dīpikā"
+type = "jyotisa"
+seen = ["दीपिकोक्तेः"]
+note = "The metrical tithi-nirṇaya digest cited as Dīpikā (identity to be confirmed)."
+
+[garuda-purana]
+name = "गरुडपुराणम्"
+iast = "Garuḍa-purāṇa"
+type = "purana"
+seen = ["गारुडे"]
+
+[hemadri]
+name = "हेमाद्रिः"
+iast = "Hemādri (Caturvarga-cintāmaṇi)"
+type = "nibandha"
+seen = ["हेमाद्रौ", "हेमाद्रिः", "हेमाद्री (OCR)"]
+
+[kala-hemadri]
+name = "कालहेमाद्रिः"
+iast = "Hemādri, Kāla-khaṇḍa"
+type = "nibandha"
+part_of = "hemadri"
+seen = ["कालहेमाद्रौ"]
+
+[vrata-hemadri]
+name = "व्रतहेमाद्रिः"
+iast = "Hemādri, Vrata-khaṇḍa"
+type = "nibandha"
+part_of = "hemadri"
+seen = ["व्रतहेमाद्रौ", "व्रतकाण्डे"]
+
+[jyotir-nibandha]
+name = "ज्योतिर्निबन्धः"
+iast = "Jyotirnibandha"
+type = "jyotisa"
+seen = ["ज्योतिर्निबन्धे", "ज्योतिर्निबन्धवचनात्"]
+
+[kalottara]
+name = "कालोत्तरम्"
+iast = "Kālottara"
+type = "agama"
+seen = ["कालोत्तरे"]
+
+[kashi-khanda]
+name = "काशीखण्डः"
+iast = "Kāśī-khaṇḍa (Skanda-purāṇa)"
+type = "purana"
+part_of = "skanda-purana"
+seen = ["काशीखण्डे"]
+
+[linga-purana]
+name = "लिङ्गपुराणम्"
+iast = "Liṅga-purāṇa"
+type = "purana"
+seen = ["लैङ्गे"]
+
+[madana-ratna]
+name = "मदनरत्नम्"
+iast = "Madanaratna"
+type = "nibandha"
+seen = ["मदनरत्ने", "मदरने (OCR)"]
+
+[mahabharata]
+name = "महाभारतम्"
+iast = "Mahābhārata"
+type = "itihasa"
+seen = ["महाभारते दानधर्मेषु"]
+
+[markandeya-purana]
+name = "मार्कण्डेयपुराणम्"
+iast = "Mārkaṇḍeya-purāṇa"
+type = "purana"
+seen = ["मार्कण्डेयपुराणे"]
+
+[matsya-purana]
+name = "मत्स्यपुराणम्"
+iast = "Matsya-purāṇa"
+type = "purana"
+seen = ["मात्स्ये", "मात्स्यवचनात्"]
+
+[nagara-khanda]
+name = "नागरखण्डः"
+iast = "Nāgara-khaṇḍa (Skanda-purāṇa)"
+type = "purana"
+part_of = "skanda-purana"
+seen = ["नागरखण्डे"]
+
+[narada-purana]
+name = "नारदीयपुराणम्"
+iast = "Nāradīya-purāṇa"
+type = "purana"
+seen = ["नारदीयवचनेन", "नारदवाक्यस्य"]
+
+[nirnayamrta]
+name = "निर्णयामृतम्"
+iast = "Nirṇayāmṛta"
+type = "nibandha"
+seen = ["निर्णयामृते"]
+
+[nrsimha-aradhana-ratnamala]
+name = "नृसिंहाराधनरत्नमाला"
+iast = "Nṛsiṃhārādhana-ratnamālā"
+type = "nibandha"
+seen = ["नृसिंहाराधनरत्नमालायां"]
+
+[padma-purana]
+name = "पद्मपुराणम्"
+iast = "Padma-purāṇa"
+type = "purana"
+seen = ["पाद्मे", "पाझे (OCR)", "पामे (OCR)", "पाने (OCR)"]
+
+[purana-samuccaya]
+name = "पुराणसमुच्चयः"
+iast = "Purāṇasamuccaya"
+type = "nibandha"
+seen = ["पुराणसमुच्चये"]
+
+[rama-arcana-candrika]
+name = "रामार्चनचन्द्रिका"
+iast = "Rāmārcana-candrikā"
+type = "nibandha"
+seen = ["रामार्चनचन्द्रिकायां", "चन्द्रिकायां", "चन्द्रिकोक्तिः"]
+
+[shulapani]
+name = "शूलपाणिः"
+iast = "Śūlapāṇi"
+type = "nibandha"
+seen = ["शूलपाणौ"]
+
+[skanda-purana]
+name = "स्कन्दपुराणम्"
+iast = "Skanda-purāṇa"
+type = "purana"
+seen = ["स्कान्दे", "स्कान्दवचनात्"]
+
+[varaha-purana]
+name = "वराहपुराणम्"
+iast = "Varāha-purāṇa"
+type = "purana"
+seen = ["वाराहे"]
+
+[vayu-purana]
+name = "वायुपुराणम्"
+iast = "Vāyu-purāṇa"
+type = "purana"
+seen = ["वायुपुराणे"]
+
+[vishnu-smrti]
+name = "विष्णुस्मृतिः"
+iast = "Viṣṇu-smṛti"
+type = "smrti"
+seen = ["विष्णुना", "विष्णुस्मृतौ"]
+
+[vishnudharma]
+name = "विष्णुधर्माः"
+iast = "Viṣṇudharma"
+type = "upapurana"
+seen = ["विष्णुधर्मेषु"]
+
+[vishnudharmottara]
+name = "विष्णुधर्मोत्तरपुराणम्"
+iast = "Viṣṇudharmottara-purāṇa"
+type = "upapurana"
+seen = ["विष्णुधर्मोत्तरे"]
+
+[vrddha-vasishtha]
+name = "वृद्धवसिष्ठः"
+iast = "Vṛddha-Vasiṣṭha"
+type = "smrti"
+seen = ["वृद्धवसिष्ठोक्तेः", "वृद्धवसिष्ठः"]
