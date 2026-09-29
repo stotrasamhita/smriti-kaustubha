@@ -22,7 +22,7 @@ ignoreFiles = ['\.draft\.md$']
   BookToC = true
   BookSection = "*"
   BookRepo = "https://github.com/stotrasamhita/smriti-kaustubha"
-  BookEditLink = "{{ .Site.Params.BookRepo }}/edit/main/{{ .Path }}"
+  BookEditLink = "{{ .Site.Params.BookRepo }}/edit/master/{{ .Path }}"
   BookSearch = false     # Pagefind replaces the theme's search (spec §6)
   # Page scans: set when the page images are published (spec §2, "Still needed").
   ScanURL = ""
