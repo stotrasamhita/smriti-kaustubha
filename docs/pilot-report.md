@@ -49,7 +49,7 @@ since no running head names those pages: वैशाखमासकृत्य
 
 ## For the reviewers
 
-- Site: built by CI and published to GitHub Pages once this is merged to `main` (Pages source must be set to
+- Site: built by CI and published to GitHub Pages once this is merged to `master` (Pages source must be set to
   "GitHub Actions" in the repository settings). Locally: `make site && hugo server`.
 - PDF: CI artifact `sk-caitra-vaisakha-pdf`, and `/pdf/sk-caitra-vaisakha.pdf` (reading copy) and
   `/pdf/sk-caitra-vaisakha-draft.pdf` (with OCR apparatus) on the site.

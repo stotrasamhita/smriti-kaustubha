@@ -63,7 +63,7 @@ make site && hugo server              # site with Pagefind search (Hugo ≥ 0.15
 ```
 
 CI (`.github/workflows/build.yml`) runs the same steps and publishes the site, with the PDF under `/pdf/`,
-to GitHub Pages from `main`.
+to GitHub Pages from `master`.
 
 ## Roadmap
 
