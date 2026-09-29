@@ -1,0 +1,3 @@
+{{- /* {{< em print="…" >}}…{{< /em >}}: an emendation where the 1931 print itself is wrong. */ -}}
+<span class="sk-em" data-print="{{ .Get "print" }}" title="1931 print: {{ .Get "print" }}">{{ .Inner | safeHTML }}</span>
+{{- /**/ -}}

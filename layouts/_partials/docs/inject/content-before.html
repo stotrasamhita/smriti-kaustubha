@@ -1,0 +1,8 @@
+{{- with .Params.status -}}
+<div class="sk-status sk-noxlit">
+  <span class="sk-badge {{ . }}" title="ocr → cleaned → proofread-1 → proofread-2 → final">{{ . }}</span>
+  {{- with $.Params.pages }}<span>SK pp.{{ index . 0 }}–{{ index . 1 }}</span>{{ end }}
+  {{- with $.Params.id }}<code>{{ . }}</code>{{ end }}
+  {{- if in (slice "ocr" "cleaned") . }}<span>Not yet proof-read against the page images.</span>{{ end }}
+</div>
+{{- end -}}

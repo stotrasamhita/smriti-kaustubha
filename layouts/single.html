@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <article class="markdown book-article sk-text" data-pagefind-body>
+    <h1>{{ .Title }}</h1>
+    {{- /* Search filters (spec §6): dīdhiti, month, cited source. */ -}}
+    <div hidden data-pagefind-ignore>
+      {{- with .Params.didhiti }}<span data-pagefind-filter="didhiti">{{ . }}</span>{{ end }}
+      {{- with .Params.month }}<span data-pagefind-filter="month">{{ . }}</span>{{ end }}
+      {{- range .Params.sources }}<span data-pagefind-filter="source">{{ with index site.Data.sources . }}{{ .name }}{{ end }}</span>{{ end }}
+    </div>
+    {{- /* `[?]` marks a reading to check against the page image (CLAUDE.md, docs/ocr-errors.md). */ -}}
+    {{- /* A daṇḍa never starts a line: bind it to the word before with a no-break space. */ -}}
+    {{- .Content | replaceRE ` +([।॥])` "\u00a0$1" | replaceRE `\[\?\]` `<span class="sk-doubt sk-noxlit" title="Doubtful: check the page image">[?]</span>` | safeHTML -}}
+  </article>
+{{ end }}

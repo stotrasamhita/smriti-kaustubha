@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <article class="markdown book-article sk-text">
+    {{- if not (findRE `<h1` .Content 1) }}<h1>{{ .Title }}</h1>{{ end -}}
+    {{- .Content -}}
+    {{- with .Pages }}
+    <ol >
+      {{- range .ByWeight }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Params.pages }} <span class="sk-noxlit">(pp.{{ index . 0 }}–{{ index . 1 }})</span>{{ end }}</li>
+      {{- end }}
+    </ol>
+    {{- end }}
+  </article>
+{{ end }}

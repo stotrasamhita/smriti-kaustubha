@@ -1,0 +1,28 @@
+baseURL = "https://stotrasamhita.github.io/smriti-kaustubham/"
+title = "स्मृतिकौस्तुभः"
+theme = "hugo-book"
+languageCode = "sa"
+enableGitInfo = true
+disablePathToLower = true
+
+# Only the structured text is published; project docs and raw OCR stay in the repo.
+ignoreFiles = ['\.draft\.md$']
+
+[markup.goldmark.renderer]
+  unsafe = true          # shortcodes emit inline HTML inside paragraphs
+[markup.goldmark.parser.attribute]
+  block = true           # `{#p87.3}` after a paragraph sets its stable ID
+[markup.goldmark.extensions.typographer]
+  disable = true         # never touch Sanskrit punctuation
+[markup.tableOfContents]
+  startLevel = 2
+
+[params]
+  BookTheme = "auto"
+  BookToC = true
+  BookSection = "*"
+  BookRepo = "https://github.com/stotrasamhita/smriti-kaustubham"
+  BookEditLink = "{{ .Site.Params.BookRepo }}/edit/main/{{ .Path }}"
+  BookSearch = false     # Pagefind replaces the theme's search (spec §6)
+  # Page scans: set when the page images are published (spec §2, "Still needed").
+  ScanURL = ""

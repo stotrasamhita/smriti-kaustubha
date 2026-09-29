@@ -1,0 +1,8 @@
+{{- /* {{< q src="bhavishya" via="hemadri" >}}…{{< /q >}}: a quotation and the work it is cited from. */ -}}
+{{- $src := .Get "src" -}}
+{{- $via := .Get "via" -}}
+{{- $names := slice -}}
+{{- with $src }}{{ with index site.Data.sources . }}{{ $names = $names | append .name }}{{ else }}{{ $names = $names | append $src }}{{ end }}{{ end -}}
+{{- range split (default "" $via) " " }}{{ with . }}{{ with index site.Data.sources . }}{{ $names = $names | append (printf "via %s" .name) }}{{ end }}{{ end }}{{ end -}}
+<span class="sk-q"{{ with $src }} data-src="{{ . }}"{{ end }}{{ with $via }} data-via="{{ . }}"{{ end }}{{ with $names }} title="{{ delimit . " · " }}"{{ end }}>{{ .Inner | safeHTML }}</span>
+{{- /**/ -}}

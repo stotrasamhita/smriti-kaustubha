@@ -1,0 +1,69 @@
+/* Smṛti-kaustubha: styles for the text model (spec §4, §6). */
+:root {
+  --sk-accent: #8a3b12;
+  --sk-muted: #6b6b6b;
+  --sk-corr-bg: rgba(255, 196, 0, .18);
+  --sk-doubt-bg: rgba(220, 38, 38, .15);
+  --sk-q-border: rgba(138, 59, 18, .35);
+}
+@media (prefers-color-scheme: dark) {
+  :root { --sk-accent: #f0a36b; --sk-muted: #a0a0a0; --sk-corr-bg: rgba(255, 196, 0, .12); --sk-q-border: rgba(240, 163, 107, .4); }
+}
+
+.markdown { font-family: "Noto Serif Devanagari", "Tiro Devanagari Sanskrit", serif; line-height: 1.9; }
+.markdown p { position: relative; text-align: justify; hyphens: none; }
+
+/* Printed page marker: a margin tag at the exact break. */
+.sk-pg {
+  display: inline-block; font: .7rem/1.2 system-ui, sans-serif; color: var(--sk-muted) !important;
+  border: 1px solid currentColor; border-radius: 3px; padding: 0 .25em; margin: 0 .2em; vertical-align: .15em;
+  text-decoration: none !important;
+}
+.sk-pg:target { color: var(--sk-accent) !important; }
+
+/* Paragraph and verse anchors, shown on hover. */
+.sk-anchor, .sk-cite {
+  font: .75rem system-ui, sans-serif; color: var(--sk-muted) !important; text-decoration: none !important;
+  opacity: 0; transition: opacity .15s; cursor: pointer; background: none; border: 0; padding: 0 .2em;
+}
+p[id]:hover > .sk-anchor, p[id]:hover > .sk-cite, .sk-shloka:hover > .sk-anchor, .sk-shloka:hover > .sk-cite,
+.sk-anchor:focus, .sk-cite:focus { opacity: 1; }
+p[id] > .sk-anchor { position: absolute; left: -2.2em; top: .2em; }
+p[id]:target, .sk-shloka:target { background: rgba(255, 230, 150, .25); }
+
+.sk-shloka { position: relative; margin: .8em 0 .8em 2em; }
+.sk-shloka > .sk-anchor { position: absolute; left: -2em; }
+.sk-line { display: block; }
+.sk-line:nth-child(odd of .sk-line) { padding-left: 0; }
+.sk-line:nth-child(even of .sk-line) { padding-left: 2em; }
+
+.sk-q { border-bottom: 1px dotted var(--sk-q-border); }
+.sk-corr { background: var(--sk-corr-bg); border-radius: 2px; cursor: help; }
+.sk-em { background: rgba(0, 128, 255, .12); cursor: help; }
+.sk-doubt { background: var(--sk-doubt-bg); font: .7em system-ui, sans-serif; border-radius: 2px; padding: 0 .15em; }
+body.sk-plain .sk-corr, body.sk-plain .sk-em, body.sk-plain .sk-q { background: none; border: 0; }
+
+.sk-mn {
+  float: right; clear: right; margin: 0 -9rem 0 1rem; width: 8rem; font-size: .8rem; line-height: 1.4;
+  color: var(--sk-accent); text-align: left;
+}
+@media (max-width: 80rem) { .sk-mn { float: none; margin: 0; width: auto; display: block; font-weight: 600; } }
+
+.sk-note { position: relative; cursor: help; }
+.sk-note-mark { color: var(--sk-accent); font-weight: 600; }
+.sk-note-body {
+  display: none; position: absolute; z-index: 10; left: -1em; top: 1.6em; min-width: 14em; max-width: 24em;
+  background: var(--body-background, #fff); border: 1px solid var(--gray-200, #ddd); border-radius: 4px;
+  padding: .4em .6em; font-size: .9rem; line-height: 1.5; box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.sk-note:hover .sk-note-body, .sk-note:focus .sk-note-body { display: block; }
+
+.sk-status { font: .8rem system-ui, sans-serif; margin-bottom: 1rem; display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; }
+.sk-badge { border-radius: 1em; padding: .1em .7em; background: var(--gray-100, #eee); }
+.sk-badge.ocr, .sk-badge.cleaned { background: rgba(255, 196, 0, .25); }
+.sk-badge.proofread-1, .sk-badge.proofread-2 { background: rgba(0, 160, 80, .2); }
+.sk-badge.final { background: rgba(0, 160, 80, .45); }
+
+.sk-script { margin: 0 0 1rem; font: .9rem system-ui, sans-serif; }
+.sk-script select { width: 100%; padding: .25rem; }
+.sk-toast { position: fixed; bottom: 1rem; right: 1rem; background: #333; color: #fff; padding: .4rem .8rem; border-radius: 4px; font: .85rem system-ui, sans-serif; }

@@ -1,0 +1,3 @@
+{{- /* {{< fig "kunda-chaturasra" >}}: a redrawn figure from static/fig/<slug>.svg. */ -}}
+{{- $slug := .Get 0 -}}
+<figure class="sk-fig" id="fig.{{ $slug }}"><img src="{{ printf "fig/%s.svg" $slug | relURL }}" alt="{{ $slug }}"></figure>

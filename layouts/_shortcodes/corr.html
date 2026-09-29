@@ -1,0 +1,3 @@
+{{- /* {{< corr ocr="सात्वा" >}}स्नात्वा{{< /corr >}}: our correction of an OCR error. */ -}}
+<span class="sk-corr" data-ocr="{{ .Get "ocr" }}" title="OCR: {{ with .Get "ocr" }}{{ . }}{{ else }}(nothing){{ end }}">{{ .Inner | safeHTML }}</span>
+{{- /**/ -}}

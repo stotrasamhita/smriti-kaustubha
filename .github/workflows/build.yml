@@ -1,0 +1,81 @@
+# Validate the text, build the PDF and the site, and publish both to GitHub Pages (spec §3).
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  HUGO_VERSION: "0.160.0"
+  PAGEFIND_VERSION: "1.5.2"
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0   # enableGitInfo
+
+      - name: Validate the master text
+        run: python3 tools/validate.py
+
+      - name: Check generated files are current
+        run: |
+          python3 tools/build_pages.py > /tmp/pages.toml && diff -u data/pages.toml /tmp/pages.toml
+          python3 tools/checklist.py caitra-krtyam > /tmp/cl.md && diff -u docs/proofreading/caitra-krtyam.md /tmp/cl.md
+
+      - name: Install PDF toolchain
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q --no-install-recommends pandoc texlive-luatex texlive-latex-recommended \
+            texlive-latex-extra fonts-noto-core
+          pip install indic_transliteration
+
+      - name: Build PDF
+        run: python3 tools/build_pdf.py --section caitra-krtyam --name sk-caitra-pilot
+
+      - name: Install Hugo
+        run: |
+          curl -sSL -o /tmp/hugo.deb \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i /tmp/hugo.deb
+
+      - name: Build site and search index
+        run: |
+          hugo --minify --baseURL "${{ github.event_name == 'push' && 'https://stotrasamhita.github.io/smriti-kaustubham/' || 'http://localhost/' }}"
+          mkdir -p public/pdf && cp build/pdf/sk-caitra-pilot.pdf public/pdf/
+          npx --yes "pagefind@${PAGEFIND_VERSION}" --site public
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sk-caitra-pilot-pdf
+          path: build/pdf/sk-caitra-pilot.pdf
+
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name == 'push'
+        with:
+          path: public
+
+  deploy:
+    if: github.event_name == 'push'
+    needs: build
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

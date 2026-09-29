@@ -1,0 +1,6 @@
+{{- /* {{< shloka id="p87.v2" >}} one half-verse per line {{< /shloka >}} */ -}}
+{{- $id := .Get "id" -}}
+<div class="sk-shloka"{{ with $id }} id="{{ . }}"{{ end }}>
+{{- with $id }}<a class="sk-anchor sk-noxlit" href="#{{ . }}" title="{{ . }}">¶</a>{{ end }}
+{{- range split (trim .Inner "\n") "\n" }}{{ with trim . " " }}<span class="sk-line">{{ . | safeHTML }}</span>{{ end }}{{ end -}}
+</div>
