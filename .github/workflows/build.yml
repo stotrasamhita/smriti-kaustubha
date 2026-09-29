@@ -57,7 +57,7 @@ jobs:
 
       - name: Build site and search index
         run: |
-          hugo --minify --baseURL "${{ github.event_name == 'push' && 'https://stotrasamhita.github.io/kaustubha/' || 'http://localhost/' }}"
+          hugo --minify --baseURL "${{ github.event_name == 'push' && 'https://stotrasamhita.github.io/smriti-kaustubha/' || 'http://localhost/' }}"
           mkdir -p public/pdf && cp build/pdf/sk-caitra-vaisakha*.pdf build/pdf/*-corrections.tsv public/pdf/
           npx --yes "pagefind@${PAGEFIND_VERSION}" --site public
 
