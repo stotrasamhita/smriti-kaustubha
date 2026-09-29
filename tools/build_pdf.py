@@ -30,7 +30,7 @@ from validate import ATTR, ROOT, content_files, split_front_matter  # noqa: E402
 
 BUILD = ROOT / "build/pdf"
 PDF = ROOT / "pdf"
-SITE = "https://stotrasamhita.github.io/smriti-kaustubham"
+SITE = "https://stotrasamhita.github.io/kaustubha"
 TITHI = ["प्रतिपत्", "द्वितीया", "तृतीया", "चतुर्थी", "पञ्चमी", "षष्ठी", "सप्तमी", "अष्टमी", "नवमी",
          "दशमी", "एकादशी", "द्वादशी", "त्रयोदशी", "चतुर्दशी"]
 MONTHS = ["चैत्रः", "वैशाखः", "ज्येष्ठः", "आषाढः", "श्रावणः", "भाद्रपदः", "आश्विनः", "कार्तिकः",

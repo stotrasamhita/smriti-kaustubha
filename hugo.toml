@@ -1,4 +1,4 @@
-baseURL = "https://stotrasamhita.github.io/smriti-kaustubham/"
+baseURL = "https://stotrasamhita.github.io/kaustubha/"
 title = "स्मृतिकौस्तुभः"
 theme = "hugo-book"
 languageCode = "sa"
@@ -21,7 +21,7 @@ ignoreFiles = ['\.draft\.md$']
   BookTheme = "auto"
   BookToC = true
   BookSection = "*"
-  BookRepo = "https://github.com/stotrasamhita/smriti-kaustubham"
+  BookRepo = "https://github.com/stotrasamhita/kaustubha"
   BookEditLink = "{{ .Site.Params.BookRepo }}/edit/main/{{ .Path }}"
   BookSearch = false     # Pagefind replaces the theme's search (spec §6)
   # Page scans: set when the page images are published (spec §2, "Still needed").
