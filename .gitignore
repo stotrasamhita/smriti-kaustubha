@@ -1,0 +1,34 @@
+# Hugo
+/public/
+/resources/_gen/
+.hugo_build.lock
+/node_modules/
+/pagefind/
+
+# LaTeX / PDF build
+/pdf/build/
+*.aux
+*.log
+*.out
+*.toc
+*.idx
+*.ind
+*.ilg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+
+# Page images live outside Git
+/source/images/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/
+*~
