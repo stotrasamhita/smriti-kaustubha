@@ -236,3 +236,71 @@ name = "वृद्धवसिष्ठः"
 iast = "Vṛddha-Vasiṣṭha"
 type = "smrti"
 seen = ["वृद्धवसिष्ठोक्तेः", "वृद्धवसिष्ठः"]
+
+# Added with the Vaiśākha-kṛtyam (pp.108–117).
+
+[aditya-purana]
+name = "आदित्यपुराणम्"
+iast = "Āditya-purāṇa"
+type = "upapurana"
+seen = ["आदित्यपुराणे"]
+
+[bhargava-candrika]
+name = "भार्गवचन्द्रिका"
+iast = "Bhārgava-candrikā"
+type = "nibandha"
+seen = ["भार्गवचन्द्रिकायां"]
+
+[govindarnava]
+name = "गोविन्दार्णवः"
+iast = "Govindārṇava"
+type = "nibandha"
+seen = ["गोविन्दार्णवे"]
+
+[nrsimha-purana]
+name = "नृसिंहपुराणम्"
+iast = "Nṛsiṃha-purāṇa"
+type = "upapurana"
+seen = ["नृसिंहपुराणे"]
+
+[pulastya]
+name = "पुलस्त्यः"
+iast = "Pulastya"
+type = "smrti"
+seen = ["पुलस्त्यवचनात्"]
+
+[samvatsara-pradipa]
+name = "संवत्सरप्रदीपः"
+iast = "Saṃvatsara-pradīpa"
+type = "nibandha"
+seen = ["संवत्सरप्रदीपे"]
+
+[smrti-candrika]
+name = "स्मृतिचन्द्रिका"
+iast = "Smṛticandrikā"
+type = "nibandha"
+seen = ["स्मृतिचन्द्रिकावचनात्"]
+
+[tithi-tattva]
+name = "तिथितत्त्वम्"
+iast = "Tithitattva (Raghunandana)"
+type = "nibandha"
+seen = ["तिथितत्त्वे"]
+
+[vamana-purana]
+name = "वामनपुराणम्"
+iast = "Vāmana-purāṇa"
+type = "purana"
+seen = ["वामनपुराणे"]
+
+[vishnu-purana]
+name = "विष्णुपुराणम्"
+iast = "Viṣṇu-purāṇa"
+type = "purana"
+seen = ["विष्णुपुराणवचनात्"]
+
+[yama-gatha]
+name = "यमगाथाः"
+iast = "Yama-gāthā"
+type = "smrti"
+seen = ["यमगाथासु"]

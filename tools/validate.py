@@ -202,29 +202,41 @@ class Checker:
                 self.err(f"{fb}:{lb}", f"page marker p.{b} follows p.{a}")
 
 
+def weight_of(index_md):
+    try:
+        fm, _, _ = split_front_matter(index_md.read_text(encoding="utf-8"), index_md)
+        return fm.get("weight", 0)
+    except (OSError, ValueError):
+        return 0
+
+
 def content_files():
-    """Topic files in reading order: section by weight, then file by weight."""
+    """Topic files in reading order: dīdhiti, section and topic, each by its `weight`."""
     files = []
     for f in CONTENT.rglob("*.md"):
         # Topic files live at content/<dīdhiti>/<section>/<topic>.md; other pages (search, home) are not text.
         if f.name == "_index.md" or len(f.relative_to(CONTENT).parts) != 3:
             continue
         fm, _, _ = split_front_matter(f.read_text(encoding="utf-8"), f)
-        files.append((str(f.parent), fm.get("weight", 0), f))
-    return [f for _, _, f in sorted(files)]
+        key = (weight_of(f.parent.parent / "_index.md"), weight_of(f.parent / "_index.md"), fm.get("weight", 0), f.name)
+        files.append((key, f))
+    return [f for _, f in sorted(files)]
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--fix-sources", action="store_true", help="rewrite front-matter sources from the tags")
-    ap.add_argument("--first", type=int, default=85, help="first printed page that must be present")
-    ap.add_argument("--last", type=int, default=108, help="last printed page that must be present")
+    ap.add_argument("--first", type=int, help="first printed page that must be present (default: first marker)")
+    ap.add_argument("--last", type=int, help="last printed page that must be present (default: last marker)")
     args = ap.parse_args()
 
     sources = tomllib.loads((ROOT / "data/sources.toml").read_text(encoding="utf-8"))
     c = Checker(sources)
     for f in content_files():
         c.check_file(f, args.fix_sources)
+    seen = [p for p, _, _ in c.pages]
+    args.first = args.first or min(seen)
+    args.last = args.last or max(seen)
     c.check_pages(args.first, args.last)
 
     for w in c.warnings:

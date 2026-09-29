@@ -35,7 +35,9 @@ jobs:
       - name: Check generated files are current
         run: |
           python3 tools/build_pages.py > /tmp/pages.toml && diff -u data/pages.toml /tmp/pages.toml
-          python3 tools/checklist.py caitra-krtyam > /tmp/cl.md && diff -u docs/proofreading/caitra-krtyam.md /tmp/cl.md
+          for s in caitra-krtyam vaisakha-krtyam; do
+            python3 tools/checklist.py $s > /tmp/cl.md && diff -u docs/proofreading/$s.md /tmp/cl.md
+          done
 
       - name: Install PDF toolchain
         run: |
@@ -44,8 +46,8 @@ jobs:
             texlive-latex-extra fonts-noto-core
           pip install indic_transliteration
 
-      - name: Build PDF
-        run: python3 tools/build_pdf.py --section caitra-krtyam --name sk-caitra-pilot
+      - name: Build PDFs (reading copy and proof copy)
+        run: make pdf
 
       - name: Install Hugo
         run: |
@@ -56,13 +58,15 @@ jobs:
       - name: Build site and search index
         run: |
           hugo --minify --baseURL "${{ github.event_name == 'push' && 'https://stotrasamhita.github.io/smriti-kaustubham/' || 'http://localhost/' }}"
-          mkdir -p public/pdf && cp build/pdf/sk-caitra-pilot.pdf public/pdf/
+          mkdir -p public/pdf && cp build/pdf/sk-caitra-vaisakha*.pdf build/pdf/*-corrections.tsv public/pdf/
           npx --yes "pagefind@${PAGEFIND_VERSION}" --site public
 
       - uses: actions/upload-artifact@v4
         with:
-          name: sk-caitra-pilot-pdf
-          path: build/pdf/sk-caitra-pilot.pdf
+          name: sk-caitra-vaisakha-pdf
+          path: |
+            build/pdf/sk-caitra-vaisakha*.pdf
+            build/pdf/sk-caitra-vaisakha-corrections.tsv
 
       - uses: actions/upload-pages-artifact@v3
         if: github.event_name == 'push'

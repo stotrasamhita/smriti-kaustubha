@@ -1,6 +1,10 @@
 # Local builds. See pdf/README.md and tools/ for what each step does.
-SECTION ?= caitra-krtyam
-PDFNAME ?= sk-caitra-pilot
+SECTIONS ?= caitra-krtyam vaisakha-krtyam
+PDFNAME ?= sk-caitra-vaisakha
+comma := ,
+empty :=
+space := $(empty) $(empty)
+SECTIONLIST := $(subst $(space),$(comma),$(SECTIONS))
 
 .PHONY: all validate generated pdf site serve clean
 
@@ -11,14 +15,16 @@ validate:
 
 generated:
 	python3 tools/build_pages.py > data/pages.toml
-	python3 tools/checklist.py $(SECTION) > docs/proofreading/$(SECTION).md
+	for s in $(SECTIONS); do python3 tools/checklist.py $$s > docs/proofreading/$$s.md; done
 
+# Reading copy (corrections silent, logged in build/pdf/$(PDFNAME)-corrections.tsv) and proof copy.
 pdf:
-	python3 tools/build_pdf.py --section $(SECTION) --name $(PDFNAME)
+	python3 tools/build_pdf.py --section $(SECTIONLIST) --name $(PDFNAME)
+	python3 tools/build_pdf.py --section $(SECTIONLIST) --name $(PDFNAME)-draft --draft
 
 site: pdf
 	hugo --minify
-	mkdir -p public/pdf && cp build/pdf/$(PDFNAME).pdf public/pdf/
+	mkdir -p public/pdf && cp build/pdf/$(PDFNAME).pdf build/pdf/$(PDFNAME)-draft.pdf public/pdf/
 	npx --yes pagefind@1.5.2 --site public
 
 serve:

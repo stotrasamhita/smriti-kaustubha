@@ -34,18 +34,28 @@
 \renewcommand{\cleardoublepage}{\clearpage\if@twoside\ifodd\c@page\else\hbox{}\thispagestyle{empty}\newpage\fi\fi}
 \makeatother
 
-%% Apparatus: 1931 footnotes are ordinary \footnote; series A = our corrections and emendations,
-%% series B = Kāśī variant readings. A and B are set as run-in paragraphs below the 1931 notes.
+%% Two modes. Reading copy (default): corrected text only. Every correction stays in this .tex as
+%% \skcorr{printed}{OCR reading}, every doubt as \skdoubt, and all are listed in <name>-corrections.tsv.
+%% Draft (`build_pdf.py --draft`): apparatus series A gives "lemma ] OCR reading", doubts show as red [?].
+%% 1931 footnotes are ordinary \footnote in both modes; series B (Kāśī variant readings) likewise.
 \DeclareNewFootnote[para]{A}
 \DeclareNewFootnote[para]{B}
 \renewcommand{\thefootnoteA}{}
 \renewcommand{\thefootnoteB}{}
 \newcommand{\sklemma}[1]{#1\,]}
-\newcommand{\skcorr}[2]{#1\FootnotetextA{}{\sklemma{#1} {\latinfont\footnotesize\itshape OCR} \ifx\relax#2\relax{\latinfont\footnotesize\itshape om.}\else#2\fi\enspace}}
-\newcommand{\skem}[2]{#1\FootnotetextA{}{\sklemma{#1} {\latinfont\footnotesize\itshape 1931} #2\enspace}}
 \newcommand{\skvar}[1]{\FootnotetextB{}{#1\enspace}}
 \newcommand{\skq}[2]{#2}
+$if(draft)$
+\newcommand{\skcorr}[2]{#1\FootnotetextA{}{\sklemma{#1} {\latinfont\footnotesize\itshape OCR} \ifx\relax#2\relax{\latinfont\footnotesize\itshape om.}\else#2\fi\enspace}}
+\newcommand{\skem}[2]{#1\FootnotetextA{}{\sklemma{#1} {\latinfont\footnotesize\itshape 1931} #2\enspace}}
 \newcommand{\skdoubt}{\textsuperscript{\textcolor{red!70!black}{\latinfont[?]}}}
+\newcommand{\skmeta}[1]{{\centering\latinfont\scriptsize\textcolor{black!55}{#1}\par}}
+$else$
+\newcommand{\skcorr}[2]{#1}
+\newcommand{\skem}[2]{#1}
+\newcommand{\skdoubt}{}
+\newcommand{\skmeta}[1]{}
+$endif$
 \newcommand{\skindent}{\hspace*{2em}}
 
 %% 1931 page numbers in the outer margin at the exact break ("|87").
@@ -68,7 +78,9 @@
   \begin{center}\Large\href{#2}{#4}\end{center}\nopagebreak
   \addcontentsline{toc}{section}{#4}\markright{#4}%
   \pdfbookmark[1]{#4}{#1}%
-  {\centering\latinfont\scriptsize\textcolor{black!55}{#1 · #3 · \url{#2}}\par}\nopagebreak\medskip}
+  \skmeta{#1 · #3 · \url{#2}}\nopagebreak\medskip}
+\newcommand{\sksection}[1]{\cleardoublepage\begin{center}\huge #1\end{center}\addcontentsline{toc}{chapter}{#1}%
+  \pdfbookmark[0]{#1}{#1}\bigskip}
 
 \newcommand{\skindices}{\cleardoublepage\markright{सूच्यः · Indices}\section*{सूच्यः \latinfont\normalsize · Indices}
   \addcontentsline{toc}{section}{सूच्यः · Indices}{\latinfont\small Page numbers are those of the 1931 edition.\par}}
@@ -92,7 +104,7 @@
   {\latinfont
   Nirṇaya Sāgara Press, Bombay, 2nd ed., 1931, printed pp.\,$pages$\par\medskip
   Digital edition · Phase~0 pilot · \today\par\medskip
-  \textcolor{red!70!black}{Draft: machine-cleaned OCR, not yet proof-read against the page images.}\par}
+  $if(draft)$\textcolor{red!70!black}{Proof copy with OCR apparatus. Not yet proof-read against the page images.}$else$Draft for comment. The text is corrected from OCR but not yet proof-read against the page images.$endif$\par}
 \end{center}
 \cleardoublepage
 {\latinfont\small
@@ -101,9 +113,14 @@
 \item Numbers in the outer margin (|87) are the page numbers of the 1931 edition; a grey bar marks the exact break.
   Side-headings printed in the 1931 margins are also set in the margin.
 \item Footnotes numbered 1, 2, 3 are the 1931 edition's own notes (mostly readings of other manuscripts, \emph{iti pāṭhaḥ}).
+$if(draft)$
 \item Unnumbered notes in the first apparatus give the OCR reading for every word we corrected: \emph{lemma\,] OCR reading}.
   These corrections were made from context; each must still be checked against the page images.
 \item A red [?] marks a doubtful reading to be checked against the page image.
+$else$
+\item Obvious OCR errors have been corrected silently; the list of corrections, and of readings still in doubt,
+  is kept with the source files and printed in the proof copy.
+$endif$
 \item Headings link to the web edition, where every paragraph has a stable anchor (e.g. \#p87.1).
 \end{itemize}
 }

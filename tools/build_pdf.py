@@ -8,8 +8,13 @@
 The indices (spec §8) are computed here from the same tags, with 1931 page numbers, and appended
 as LaTeX. Nothing in build/ is edited by hand.
 
-    python3 tools/build_pdf.py [--section caitra-krtyam] [--name sk-caitra-pilot] [--tex-only]
+    python3 tools/build_pdf.py [--section caitra-krtyam,vaisakha-krtyam] [--name sk-caitra-pilot] [--tex-only]
+    python3 tools/build_pdf.py --draft              # proof copy: OCR apparatus and [?] marks printed
     python3 tools/build_pdf.py --script iast        # optional IAST edition
+
+By default the PDF is a clean reading copy: corrected text only, no apparatus, no [?] marks. Every
+correction and doubtful reading is still in the .tex (as the macro arguments \skcorr{ours}{ocr} and
+\skdoubt) and is listed in build/pdf/<name>-corrections.tsv.
 """
 import argparse
 import re
@@ -133,6 +138,24 @@ def collect(files):
     return idx
 
 
+def corrections_log(files):
+    """Every correction and [?] with its 1931 page, for the reading copy's side log."""
+    tok = re.compile(r'\{\{<\s*pg\s+(\d+)\s*>\}\}|\{\{<\s*corr ocr="([^"]*)"\s*>\}\}(.*?)\{\{<\s*/corr\s*>\}\}(\s*\[\?\])?|\[\?\]')
+    rows, page = ["page\ttopic\tocr\tprinted\tdoubtful"], None
+    for f in files:
+        fm, body, _ = split_front_matter(f.read_text(encoding="utf-8"), f)
+        page = page or fm["pages"][0]
+        for m in tok.finditer(body):
+            if m.group(1):
+                page = int(m.group(1))
+            elif m.group(2) is not None:
+                ours = re.sub(r"\{\{<[^>]*>\}\}", "", m.group(3))
+                rows.append(f"{page}\t{fm['id']}\t{m.group(2)}\t{ours}\t{'yes' if m.group(4) else ''}")
+            else:
+                rows.append(f"{page}\t{fm['id']}\t\t\tyes")
+    return "\n".join(rows) + "\n"
+
+
 def indices_tex(idx, scan_of):
     L = [r"\skindices"]
     L += [r"\skindex{उद्धृतग्रन्थसूची}{Index of cited sources}", r"\begin{skindexlist}"]
@@ -160,29 +183,42 @@ def indices_tex(idx, scan_of):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    ap.add_argument("--section", default="caitra-krtyam")
+    ap.add_argument("--section", default="caitra-krtyam", help="one section, or several separated by commas")
+    ap.add_argument("--draft", action="store_true", help="print the OCR apparatus and [?] marks (proof copy)")
     ap.add_argument("--name", default="sk-caitra-pilot")
     ap.add_argument("--script", default="devanagari", help="devanagari (default) or iast")
     ap.add_argument("--tex-only", action="store_true")
     args = ap.parse_args()
 
-    files = [f for f in content_files() if f.parent.name == args.section]
-    if not files:
-        sys.exit(f"no topics in section {args.section}")
+    sections = args.section.split(",")
+    files = [f for f in content_files() if f.parent.name in sections]
+    missing = [s for s in sections if not any(f.parent.name == s for f in files)]
+    if missing:
+        sys.exit(f"no topics in section(s) {', '.join(missing)}")
     BUILD.mkdir(parents=True, exist_ok=True)
 
-    parts = []
+    index = {}
     for f in files:
+        if f.parent not in index:
+            index[f.parent] = tomllib.loads((f.parent / "_index.md").read_text(encoding="utf-8").split("+++")[1])
+    heads = list(index.values())
+
+    parts, seen = [], set()
+    for f in files:
+        if f.parent not in seen and len(heads) > 1:
+            seen.add(f.parent)
+            parts.append(f"```{{=latex}}\n\\sksection{{{index[f.parent]['title']}}}\n```")
         fm, body, _ = split_front_matter(f.read_text(encoding="utf-8"), f)
         slug = fm.get("slug") or f.stem
         url = f"{SITE}/{fm['didhiti']}/{fm['section']}/{slug}/"
         parts.append(f'# {fm["title"]} {{#{fm["id"]} url="{url}" status="{fm["status"]}"}}\n\n{convert(body)}')
     text = "\n\n".join(parts) + "\n"
 
-    first = tomllib.loads((ROOT / "content" / files[0].parent.relative_to(ROOT / "content") / "_index.md")
-                          .read_text(encoding="utf-8").split("+++")[1])
-    offset = first["scan_pages"][0] - first["pages"][0]
-    tex_idx = indices_tex(collect(files), lambda p: p + offset)
+    scans = {v["printed"]: v["scan"] for v in
+             tomllib.loads((ROOT / "data/pages.toml").read_text(encoding="utf-8")).values()}
+    tex_idx = indices_tex(collect(files), lambda p: scans.get(p, "–"))
+    title = ", ".join(h["title"] for h in heads)
+    pages = f"{heads[0]['pages'][0]}–{heads[-1]['pages'][1]}"
 
     if args.script != "devanagari":
         from indic_transliteration import sanscript
@@ -194,11 +230,12 @@ def main():
 
     (BUILD / "text.md").write_text(text, encoding="utf-8")
     (BUILD / "indices.tex").write_text(tex_idx, encoding="utf-8")
+    (BUILD / f"{args.name}-corrections.tsv").write_text(corrections_log(files), encoding="utf-8")
     tex = BUILD / f"{args.name}.tex"
     subprocess.run(["pandoc", str(BUILD / "text.md"), "-f", "markdown-smart-auto_identifiers",
                     "--lua-filter", str(PDF / "sk.lua"), "--template", str(PDF / "sk.latex"),
-                    "-V", f"section-title={first['title']}", "-V", f"pages={first['pages'][0]}–{first['pages'][1]}",
-                    "-V", f"script={args.script}", "--include-after-body", str(BUILD / "indices.tex"),
+                    "-V", f"section-title={title}", "-V", f"pages={pages}",
+                    "-V", f"script={args.script}", *(["-V", "draft=true"] if args.draft else []), "--include-after-body", str(BUILD / "indices.tex"),
                     "-o", str(tex)], check=True)
     if args.tex_only:
         print(tex)

@@ -4,8 +4,8 @@ A digital edition of the **Smṛti-kaustubha** of Anantadeva (son of Āpadeva), 
 dharmaśāstra digest (*nibandha*) on tithi-nirṇaya and the observances of the year, month by month.
 Part of the [StotraSamhita](https://github.com/stotrasamhita) family of Sanskrit-text projects.
 
-> 🚧 **Work in progress: Phase 0 pilot.** The Caitra-kṛtyam (printed pp.85–108) is structured, tagged and
-> published as a website and a PDF, **but not yet proof-read against the page images**. See
+> 🚧 **Work in progress: Phase 0 pilot.** The Caitra- and Vaiśākha-kṛtyam (printed pp.85–117) are structured,
+> tagged and published as a website and a PDF, **but not yet proof-read against the page images**. See
 > [`docs/pilot-report.md`](docs/pilot-report.md) and [`docs/spec.md`](docs/spec.md).
 
 ## Goals
@@ -35,7 +35,7 @@ Both outputs are generated from the same master text.
 |---|---|---|
 | प्रास्ताविकम् (editor's introduction) and विषयानुक्रमः (topic list) | 5–16 | OCR only |
 | तिथिदीधितिः | 1–82 | OCR only |
-| संवत्सरदीधितिः | 83–580 | pp.85–108 (Caitra-kṛtyam) cleaned and tagged; rest OCR only |
+| संवत्सरदीधितिः | 83–580 | pp.85–117 (Caitra- and Vaiśākha-kṛtyam) cleaned and tagged; rest OCR only |
 | आशौचदीधितिः | 581–596 | OCR only |
 | काशीस्थपुस्तकशुद्धपाठान्तराणि (variant readings) | appendix | OCR only |
 
@@ -58,7 +58,7 @@ Both outputs are generated from the same master text.
 ```sh
 git submodule update --init           # hugo-book theme
 python3 tools/validate.py             # page markers, IDs, shortcodes, source IDs
-make pdf                              # build/pdf/sk-caitra-pilot.pdf (pandoc + LuaLaTeX)
+make pdf                              # build/pdf/sk-caitra-vaisakha.pdf (+ -draft.pdf with OCR apparatus)
 make site && hugo server              # site with Pagefind search (Hugo ≥ 0.158 extended)
 ```
 
