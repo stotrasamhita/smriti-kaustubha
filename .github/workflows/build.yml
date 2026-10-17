@@ -34,10 +34,8 @@ jobs:
 
       - name: Check generated files are current
         run: |
-          python3 tools/build_pages.py > /tmp/pages.toml && diff -u data/pages.toml /tmp/pages.toml
-          for s in caitra-krtyam vaisakha-krtyam; do
-            python3 tools/checklist.py $s > /tmp/cl.md && diff -u docs/proofreading/$s.md /tmp/cl.md
-          done
+          make generated
+          git diff --exit-code -- data/pages.toml docs/proofreading/
 
       - name: Install PDF toolchain
         run: |
@@ -58,15 +56,17 @@ jobs:
       - name: Build site and search index
         run: |
           hugo --minify --baseURL "${{ github.event_name == 'push' && 'https://stotrasamhita.github.io/smriti-kaustubha/' || 'http://localhost/' }}"
-          mkdir -p public/pdf && cp build/pdf/sk-caitra-vaisakha*.pdf build/pdf/*-corrections.tsv public/pdf/
+          mkdir -p public/pdf && cp build/pdf/sk-samvatsara*.pdf build/pdf/sk-samvatsara-corrections.tsv public/pdf/
+          cp build/pdf/sk-samvatsara.pdf public/pdf/sk-caitra-vaisakha.pdf            # address circulated earlier
+          cp build/pdf/sk-samvatsara-draft.pdf public/pdf/sk-caitra-vaisakha-draft.pdf
           npx --yes "pagefind@${PAGEFIND_VERSION}" --site public
 
       - uses: actions/upload-artifact@v4
         with:
-          name: sk-caitra-vaisakha-pdf
+          name: sk-samvatsara-pdf
           path: |
-            build/pdf/sk-caitra-vaisakha*.pdf
-            build/pdf/sk-caitra-vaisakha-corrections.tsv
+            build/pdf/sk-samvatsara*.pdf
+            build/pdf/sk-samvatsara-corrections.tsv
 
       - uses: actions/upload-pages-artifact@v3
         if: github.event_name == 'push'

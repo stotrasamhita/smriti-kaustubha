@@ -304,3 +304,17 @@ name = "यमगाथाः"
 iast = "Yama-gāthā"
 type = "smrti"
 seen = ["यमगाथासु"]
+
+# Added with the Jyeṣṭha-kṛtyam (pp.117–137).
+
+[nrsimha-paricarya]
+name = "नृसिंहपरिचर्या"
+iast = "Nṛsiṃha-paricaryā"
+type = "nibandha"
+seen = ["नृसिंहपरिचर्यायां"]
+
+[parashara]
+name = "पराशरः"
+iast = "Parāśara"
+type = "smrti"
+seen = ["पराशरोक्तं"]

@@ -4,9 +4,9 @@
 `sk.lua` maps those to LaTeX macros, `sk.latex` defines the macros and the page, and LuaLaTeX typesets.
 
 ```sh
-make pdf     # both copies below, for Caitra- and Vaiśākha-kṛtyam
-python3 tools/build_pdf.py --section caitra-krtyam,vaisakha-krtyam --name sk-caitra-vaisakha          # reading copy
-python3 tools/build_pdf.py --section caitra-krtyam,vaisakha-krtyam --name sk-caitra-vaisakha-draft --draft
+make pdf     # both copies below, for every section listed in SECTIONS in the Makefile
+python3 tools/build_pdf.py --section caitra-krtyam,vaisakha-krtyam,jyestha-krtyam --name sk-samvatsara          # reading copy
+python3 tools/build_pdf.py --section caitra-krtyam,vaisakha-krtyam,jyestha-krtyam --name sk-samvatsara-draft --draft
 python3 tools/build_pdf.py --script iast --name sk-iast   # optional IAST edition
 ```
 

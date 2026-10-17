@@ -16,15 +16,18 @@ Project: digital edition of the Smṛti-kaustubha (NSP 1931). Read `docs/spec.md
 ## Current phase
 
 Phase 0 pilot: Caitra-kṛtyam, printed pp.85–108 (scan 104–127), extended at the maintainer's request to the
-Vaiśākha-kṛtyam, pp.108–117 (scan 127–136), for circulation. Do not process further sections until the
-circulated site and PDF have been reviewed.
+Vaiśākha-kṛtyam (pp.108–117, scan 127–136) and the Jyeṣṭha-kṛtyam (pp.117–137, scan 136–156). Process further
+months only when the maintainer asks for them.
 
-Pilot state (see `docs/pilot-report.md`): both sections are in `content/samvatsara/` at status `cleaned`
+Pilot state (see `docs/pilot-report.md`): all three sections are in `content/samvatsara/` at status `cleaned`
 (machine cleanup + tagging, no proof-reading against images). Site, PDF and indices build. Next: page images,
 then proof-reading passes 1 and 2 from `docs/proofreading/<section>.md`.
 
 The PDF has two modes: the default reading copy hides corrections and `[?]` (they stay in the `.tex` and in
 `build/pdf/<name>-corrections.tsv`); `--draft` prints the OCR apparatus. Circulate the reading copy.
+`make pdf` builds both as `sk-samvatsara` (all finished months); the site also serves them under the
+earlier circulated names `sk-caitra-vaisakha*.pdf`. A new month: add it to `SECTIONS` in the Makefile
+and extend `OFFSETS` in `tools/extract_pages.py` after checking the running heads.
 
 ## Commands
 
