@@ -1,8 +1,8 @@
-# Phase 0 pilot report: Caitra-, Vaiśākha- and Jyeṣṭha-kṛtyam (printed pp.85–137)
+# Phase 0 pilot report: Caitra- to Āṣāḍha-kṛtyam (printed pp.85–148)
 
 Status on 2026-09-29. The pilot was planned for the Caitra-kṛtyam (pp.85–108); the Vaiśākha-kṛtyam
-(pp.108–117, scan 127–136) and the Jyeṣṭha-kṛtyam (pp.117–137, scan 136–156) were added so that whole
-months can be circulated for comment. The pilot's gate (spec §9) is "pilot site and PDF approved; text model frozen". This report
+(pp.108–117, scan 127–136), the Jyeṣṭha-kṛtyam (pp.117–137, scan 136–156) and the Āṣāḍha-kṛtyam
+(pp.137–148, scan 156–167) were added so that whole months can be circulated for comment. The pilot's gate (spec §9) is "pilot site and PDF approved; text model frozen". This report
 says what is ready for that review and what is still missing.
 
 ## Deliverables
@@ -19,21 +19,26 @@ says what is ready for that review and what is still missing.
 
 | | Count |
 |---|---|
-| | Caitra (pp.85–108) | Vaiśākha (pp.108–117) | Jyeṣṭha (pp.117–137) |
-|---|---|---|---|
-| Topic files | 10 | 5 | 8 |
-| Paragraphs with stable IDs / set verses | 44 / 10 | 19 / 0 | 18 / 0 |
-| Quotations tagged (`q`) | 122 | 48 | 47 |
-| OCR corrections tagged (`corr`) | 259 | 120 | 281 |
-| Doubtful readings `[?]` | 43 | 18 | 40 |
-| 1931 footnotes (`fn`) | 29 | 11 | 19 |
+| | Caitra (pp.85–108) | Vaiśākha (pp.108–117) | Jyeṣṭha (pp.117–137) | Āṣāḍha (pp.137–148) |
+|---|---|---|---|---|
+| Topic files | 10 | 5 | 8 | 4 |
+| Paragraphs with stable IDs / set verses | 44 / 10 | 19 / 0 | 18 / 0 | 19 / 0 |
+| Quotations tagged (`q`) | 122 | 48 | 47 | 75 |
+| OCR corrections tagged (`corr`) | 259 | 120 | 281 | 145 |
+| Doubtful readings `[?]` | 43 | 18 | 40 | 19 |
+| 1931 footnotes (`fn`) | 29 | 11 | 19 | 4 |
 
-Cited works in `data/sources.toml`: 51.
+Cited works in `data/sources.toml`: 60.
 
 Jyeṣṭha notes: the Vaṭa-sāvitrī pūjā (pp.126–128) is a ritual the author copies whole from another manual
 ("अन्यग्रन्थीया"), so its mantras are not tagged as quotations. The Sāvitrī story (pp.128–134) is introduced as
 Skanda-purāṇa but closed as Bhaviṣyottara; it is tagged as Skanda. On pp.118 and 128 the 1931 running head
 reads "तिथिदीधितौ" for "संवत्सरदीधितौ", an error in the print, not the OCR.
+
+Āṣāḍha notes: the 1931 edition closes the month with the two colophon verses only, without
+"इति आषाढकृत्यम्". The kṛṣṇa-pakṣa vratas at the end (mṛgaśīrṣa, aśūnyaśayana) are described as falling in
+Śrāvaṇa: the text reckons that month pūrṇimānta here ("अत्र श्रावणः कृष्णादिः"), so they are amānta Āṣāḍha
+kṛṣṇa 1–2 and are tagged as tithis 16–17 of month 4.
 
 Every correction keeps the OCR reading (`{{< corr ocr="…" >}}`) and shows on the web as a highlight with the OCR
 reading on hover. The PDF reading copy prints the corrected text silently and logs every correction in
@@ -66,7 +71,7 @@ since no running head names those pages: वैशाखमासकृत्य
 ## Still missing before the gate
 
 1. **Page images** at 400 dpi for scan 104–127, then proof-reading pass 1 and pass 2 (different readers) using
-   `docs/proofreading/caitra-krtyam.md`, `vaisakha-krtyam.md` and `jyestha-krtyam.md`. Status moves `cleaned → proofread-1 → proofread-2`.
+   `docs/proofreading/caitra-krtyam.md`, `vaisakha-krtyam.md`, `jyestha-krtyam.md` and `ashadha-krtyam.md`. Status moves `cleaned → proofread-1 → proofread-2`.
 2. Indices not yet built: subject index and glossary (need `ix` tags and `data/glossary.toml`); the verse-pāda
    index covers set verses only (see the run-in verse question in spec §9).
 3. PDF polish: Tiro Devanagari Sanskrit could not be installed in the build environment, so the PDF falls back

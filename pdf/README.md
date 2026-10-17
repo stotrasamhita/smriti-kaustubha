@@ -5,8 +5,8 @@
 
 ```sh
 make pdf     # both copies below, for every section listed in SECTIONS in the Makefile
-python3 tools/build_pdf.py --section caitra-krtyam,vaisakha-krtyam,jyestha-krtyam --name sk-samvatsara          # reading copy
-python3 tools/build_pdf.py --section caitra-krtyam,vaisakha-krtyam,jyestha-krtyam --name sk-samvatsara-draft --draft
+python3 tools/build_pdf.py --section caitra-krtyam,vaisakha-krtyam,jyestha-krtyam,ashadha-krtyam --name sk-samvatsara          # reading copy
+python3 tools/build_pdf.py --section caitra-krtyam,vaisakha-krtyam,jyestha-krtyam,ashadha-krtyam --name sk-samvatsara-draft --draft
 python3 tools/build_pdf.py --script iast --name sk-iast   # optional IAST edition
 ```
 

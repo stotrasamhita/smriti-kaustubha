@@ -146,6 +146,10 @@ class Checker:
                 elif name == "fn":
                     self.stats["1931 footnotes"] += 1
             self.stats["doubtful [?]"] += line.count("[?]")
+            # A correction must not split a sandhi: a closing halant before a vowel (…म्{/corr}उक्तम्)
+            # or a visarga before र् renders wrongly. Move the boundary into the word instead.
+            for bm in re.finditer(r"([्ः])\{\{<\s*/corr\s*>\}\}([अ-औ]|र्)", line):
+                self.err(where, f"correction ends in '{bm.group(1)}' before '{bm.group(2)}': extend it over the next word")
             # Latin letters are OCR debris; allowed only in the two words before a `[?]` flag.
             if re.search(r"[A-Za-z]", re.sub(r"\S+(?:\s\S+)?\s\[\?\]", "", SHORTCODE.sub("", line))):
                 self.err(where, "Latin letters in the text (OCR debris?)")

@@ -318,3 +318,60 @@ name = "पराशरः"
 iast = "Parāśara"
 type = "smrti"
 seen = ["पराशरोक्तं"]
+
+# Added with the Āṣāḍha-kṛtyam (pp.137–148).
+
+[aruni]
+name = "आरुणिः"
+iast = "Āruṇi (smṛti)"
+type = "smrti"
+seen = ["आरुणस्मृतौ (OCR)"]
+note = "OCR reads आरुणस्मृतौ; the name is reconstructed and must be checked on p.144."
+
+[atri]
+name = "अत्रिः"
+iast = "Atri"
+type = "smrti"
+seen = ["अत्रिः", "अत्रिवचनात्", "आहात्रिः"]
+
+[medhatithi]
+name = "मेधातिथिः"
+iast = "Medhātithi"
+type = "smrti"
+seen = ["मेधातिथिः"]
+
+[shiva-rahasya]
+name = "शिवरहस्यम्"
+iast = "Śiva-rahasya"
+type = "upapurana"
+seen = ["शिवरहस्यवचनात्"]
+
+[shivadharma]
+name = "शिवधर्मपुराणम्"
+iast = "Śivadharma"
+type = "upapurana"
+seen = ["शिवधर्मपुराणभविष्ययोः"]
+
+[vishnu-rahasya]
+name = "विष्णुरहस्यम्"
+iast = "Viṣṇu-rahasya"
+type = "upapurana"
+seen = ["विष्णुरहस्ये"]
+
+[vishveshvara]
+name = "विश्वेश्वरीयम्"
+iast = "Viśveśvarīya (Viśveśvara-smṛti)"
+type = "nibandha"
+seen = ["विश्वेश्वरीये"]
+
+[vrddha-gargya]
+name = "वृद्धगार्ग्यः"
+iast = "Vṛddha-Gārgya"
+type = "jyotisa"
+seen = ["वृद्धगार्यवचनं (OCR)"]
+
+[yatidharma-samuccaya]
+name = "यतिधर्मसमुच्चयः"
+iast = "Yatidharma-samuccaya"
+type = "nibandha"
+seen = ["यतिधर्मसमुच्चये"]

@@ -16,10 +16,10 @@ Project: digital edition of the Smṛti-kaustubha (NSP 1931). Read `docs/spec.md
 ## Current phase
 
 Phase 0 pilot: Caitra-kṛtyam, printed pp.85–108 (scan 104–127), extended at the maintainer's request to the
-Vaiśākha-kṛtyam (pp.108–117, scan 127–136) and the Jyeṣṭha-kṛtyam (pp.117–137, scan 136–156). Process further
-months only when the maintainer asks for them.
+Vaiśākha-kṛtyam (pp.108–117, scan 127–136), the Jyeṣṭha-kṛtyam (pp.117–137, scan 136–156) and the
+Āṣāḍha-kṛtyam (pp.137–148, scan 156–167). Process further months only when the maintainer asks for them.
 
-Pilot state (see `docs/pilot-report.md`): all three sections are in `content/samvatsara/` at status `cleaned`
+Pilot state (see `docs/pilot-report.md`): all four sections are in `content/samvatsara/` at status `cleaned`
 (machine cleanup + tagging, no proof-reading against images). Site, PDF and indices build. Next: page images,
 then proof-reading passes 1 and 2 from `docs/proofreading/<section>.md`.
 
@@ -27,7 +27,8 @@ The PDF has two modes: the default reading copy hides corrections and `[?]` (the
 `build/pdf/<name>-corrections.tsv`); `--draft` prints the OCR apparatus. Circulate the reading copy.
 `make pdf` builds both as `sk-samvatsara` (all finished months); the site also serves them under the
 earlier circulated names `sk-caitra-vaisakha*.pdf`. A new month: add it to `SECTIONS` in the Makefile
-and extend `OFFSETS` in `tools/extract_pages.py` after checking the running heads.
+and extend `OFFSETS` in `tools/extract_pages.py` after checking the running heads. A correction must not split
+a sandhi (`…म्{{< /corr >}}उ…`); extend it over the next word (the validator checks this).
 
 ## Commands
 
