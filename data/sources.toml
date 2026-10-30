@@ -375,3 +375,203 @@ name = "यतिधर्मसमुच्चयः"
 iast = "Yatidharma-samuccaya"
 type = "nibandha"
 seen = ["यतिधर्मसमुच्चये"]
+
+# Added with the Śrāvaṇa-kṛtyam (pp.148–200).
+
+[agni-purana]
+name = "अग्निपुराणम्"
+iast = "Agni-purāṇa"
+type = "purana"
+seen = ["अग्निपुराणे", "वह्निपुराणे", "वह्निपुराणेऽपि"]
+
+[ashvalayana]
+name = "आश्वलायनः"
+iast = "Āśvalāyana (Gṛhya-sūtra)"
+type = "sutra"
+seen = ["आश्वलायनः", "इत्याश्वलायनसूत्रे", "इत्याश्वलायनवचनात्"]
+
+[bahvrca-grhya-karika]
+name = "बह्वृचगृह्यकारिका"
+iast = "Bahvṛca-gṛhya-kārikā"
+type = "nibandha"
+seen = ["बह्वृचगृह्यकारिकायाम्", "कारिकायां", "कारिकायाम्"]
+
+[bahvrca-parishishta]
+name = "बह्वृचपरिशिष्टम्"
+iast = "Bahvṛca-pariśiṣṭa"
+type = "sutra"
+seen = ["परिशिष्टे", "बह्वृचपरिशिष्टे", "बह्वृचपरिशिष्टवाक्ये"]
+
+[bhagavata-purana]
+name = "श्रीमद्भागवतम्"
+iast = "Bhāgavata-purāṇa"
+type = "purana"
+seen = ["श्रीभागवते"]
+
+[bhrgu]
+name = "भृगुः"
+iast = "Bhṛgu"
+type = "smrti"
+seen = ["इति भृगुवचने"]
+
+[brhaspati]
+name = "बृहस्पतिः"
+iast = "Bṛhaspati"
+type = "smrti"
+seen = ["बृहस्पतिवाक्यस्य"]
+
+[camatkara-cintamani]
+name = "चमत्कारचिन्तामणिः"
+iast = "Camatkāra-cintāmaṇi"
+type = "jyotisa"
+seen = ["चमत्कारचिन्तामणौ"]
+
+[chandoga-parishishta]
+name = "छन्दोगपरिशिष्टम्"
+iast = "Chandoga-pariśiṣṭa"
+type = "sutra"
+seen = ["छन्दोगपरिशिष्टात्", "छन्दोगपरिशिष्टाच्च"]
+
+[galava]
+name = "गालवः"
+iast = "Gālava"
+type = "smrti"
+seen = ["इति गालववचनात्"]
+
+[garga]
+name = "गर्गः"
+iast = "Garga"
+type = "jyotisa"
+seen = ["इति गर्गवचनात्", "उक्तगर्गवाक्ये"]
+
+[gargya]
+name = "गार्ग्यः"
+iast = "Gārgya"
+type = "jyotisa"
+seen = ["गार्ग्यवचनात्"]
+
+[gobhila]
+name = "गोभिलः"
+iast = "Gobhila (Gṛhya-sūtra)"
+type = "sutra"
+seen = ["गोभिलः", "गोभिलसूत्रात्", "गोभिलवचनात्", "तदीयगृह्यसूत्रात्"]
+
+[jyotih-parashara]
+name = "ज्योतिःपराशरः"
+iast = "Jyotiḥ-Parāśara"
+type = "jyotisa"
+seen = ["ज्योतिःपराशरवचनात्"]
+
+[kaladarsha]
+name = "कालादर्शः"
+iast = "Kālādarśa"
+type = "nibandha"
+seen = ["कालादर्शोदाहृतवचनात्", "कालादर्शमाधवाद्युदाहृतवचनात्"]
+
+[karshnajini]
+name = "कार्ष्णाजिनिः"
+iast = "Kārṣṇājini"
+type = "smrti"
+seen = ["कार्ष्णाजिनिवचनात्", "कार्ष्णाजिनिवचनाच्च"]
+
+[katyayana]
+name = "कात्यायनः"
+iast = "Kātyāyana (Gṛhya-sūtra, Pariśiṣṭa)"
+type = "sutra"
+seen = ["कात्यायनः", "कातीयसूत्रम्", "कातीयसूत्रेपि", "कात्यायनवचनात्", "कात्यायनेन"]
+
+[kaushika-grhya]
+name = "कौशिकगृह्यम्"
+iast = "Kauśika-gṛhya(-sūtra)"
+type = "sutra"
+seen = ["कौशिकगृह्ये"]
+
+[khadira-grhya]
+name = "खादिरगृह्यम्"
+iast = "Khādira-gṛhya(-sūtra)"
+type = "sutra"
+seen = ["इति खादिरगृह्यात्"]
+
+[madhava]
+name = "माधवः"
+iast = "Mādhava (Kāla-mādhava)"
+type = "nibandha"
+seen = ["माधवोदाहृतवाक्ये", "माधवीये", "माधवाचार्याः"]
+
+[maharnava]
+name = "महार्णवः"
+iast = "Mahārṇava"
+type = "nibandha"
+seen = ["महार्णवे", "महार्णववाक्ये"]
+
+[nigama]
+name = "निगमः"
+iast = "Nigama"
+type = "smrti"
+seen = ["मदनरत्ने निगमे", "निगमवाक्ये"]
+
+[prthvicandrodaya]
+name = "पृथ्वीचन्द्रोदयः"
+iast = "Pṛthvīcandrodaya"
+type = "nibandha"
+seen = ["पृथ्वीचन्द्रोदये"]
+
+[renuka-karika]
+name = "रेणुकारिका"
+iast = "Reṇu(ka)-kārikā"
+type = "nibandha"
+seen = ["रेणुकारिकायां", "रेणुकारिकायाम्"]
+
+[rshyashrnga]
+name = "ऋष्यशृङ्गः"
+iast = "Ṛṣyaśṛṅga"
+type = "smrti"
+seen = ["ऋष्यशृङ्गवचनं"]
+
+[sangraha]
+name = "संग्रहः"
+iast = "Saṃgraha"
+type = "jyotisa"
+seen = ["ज्योतिर्निबन्धे संग्रहे"]
+
+[shaunaka]
+name = "शौनकः"
+iast = "Śaunaka"
+type = "smrti"
+seen = ["शौनकः", "शौनकोऽपि"]
+
+[smrtisara-samuccaya]
+name = "स्मृतिसारसमुच्चयः"
+iast = "Smṛtisāra-samuccaya"
+type = "nibandha"
+seen = ["स्मृतिसारसमुच्चये"]
+
+[smrtyarthasara]
+name = "स्मृत्यर्थसारः"
+iast = "Smṛtyarthasāra"
+type = "nibandha"
+seen = ["स्मृत्यर्थसारोक्तिः", "स्मृत्यर्थसारे"]
+
+[tattvasara-samhita]
+name = "तत्त्वसारसंहिता"
+iast = "Tattvasāra-saṃhitā"
+type = "samhita"
+seen = ["तत्त्वसारसंहितायां"]
+
+[vasishtha]
+name = "वसिष्ठः"
+iast = "Vasiṣṭha"
+type = "smrti"
+seen = ["वसिष्ठोऽपि", "वसिष्ठः", "वसिष्ठवाक्ये"]
+
+[vasishtha-samhita]
+name = "वसिष्ठसंहिता"
+iast = "Vasiṣṭha-saṃhitā"
+type = "jyotisa"
+seen = ["वसिष्ठसंहितायां"]
+
+[yama]
+name = "यमः"
+iast = "Yama"
+type = "smrti"
+seen = ["इति यमवाक्ये"]

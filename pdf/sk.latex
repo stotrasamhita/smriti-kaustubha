@@ -60,6 +60,7 @@ $endif$
 
 %% 1931 page numbers in the outer margin at the exact break ("|87").
 \newcommand{\skpg}[1]{\hypertarget{p#1}{}\textcolor{black!45}{\textbar}\marginpar{\raggedright\latinfont\footnotesize\textcolor{black!60}{|#1}}}
+\newcommand{\skgap}[1]{{\latinfont\small\textcolor{black!60}{[pp.\,#1 are not in the scan this edition is made from]}}}
 \newcommand{\skmn}[1]{\marginpar{\raggedright\footnotesize\color{black!75}#1}}
 \newcommand{\skpara}[1]{\hypertarget{#1}{}}
 \newenvironment{skshloka}[1]

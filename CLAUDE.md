@@ -16,10 +16,12 @@ Project: digital edition of the Smṛti-kaustubha (NSP 1931). Read `docs/spec.md
 ## Current phase
 
 Phase 0 pilot: Caitra-kṛtyam, printed pp.85–108 (scan 104–127), extended at the maintainer's request to the
-Vaiśākha-kṛtyam (pp.108–117, scan 127–136), the Jyeṣṭha-kṛtyam (pp.117–137, scan 136–156) and the
-Āṣāḍha-kṛtyam (pp.137–148, scan 156–167). Process further months only when the maintainer asks for them.
+Vaiśākha-kṛtyam (pp.108–117, scan 127–136), the Jyeṣṭha-kṛtyam (pp.117–137, scan 136–156), the
+Āṣāḍha-kṛtyam (pp.137–148, scan 156–167) and the Śrāvaṇa-kṛtyam (pp.148–200, scan 167–217; pp.150–151 are
+not in the scan, marked `{{< gap 150 151 >}}`, and the offset drops from 19 to 17 there). Process further
+months only when the maintainer asks for them.
 
-Pilot state (see `docs/pilot-report.md`): all four sections are in `content/samvatsara/` at status `cleaned`
+Pilot state (see `docs/pilot-report.md`): all five sections are in `content/samvatsara/` at status `cleaned`
 (machine cleanup + tagging, no proof-reading against images). Site, PDF and indices build. Next: page images,
 then proof-reading passes 1 and 2 from `docs/proofreading/<section>.md`.
 

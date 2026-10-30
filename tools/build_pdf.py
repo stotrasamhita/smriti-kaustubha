@@ -89,6 +89,7 @@ def inline(s):
     s = s.replace("[?]", "\x01")
     s = s.replace("[", "\\[").replace("]", "\\]")  # literal brackets in the OCR text
     s = re.sub(r"\{\{<\s*pg\s+(\d+)\s*>\}\}", r"[\1]{.pg}", s)
+    s = re.sub(r"\{\{<\s*gap\s+(\d+)\s+(\d+)\s*>\}\}", r"[\1–\2]{.gap}", s)
     s = re.sub(r"\{\{<\s*fn\s*>\}\}", "^[", s)
     s = re.sub(r"\{\{<\s*/fn\s*>\}\}", "]", s)
 
@@ -216,7 +217,7 @@ def main():
 
     scans = {v["printed"]: v["scan"] for v in
              tomllib.loads((ROOT / "data/pages.toml").read_text(encoding="utf-8")).values()}
-    tex_idx = indices_tex(collect(files), lambda p: scans.get(p, "–"))
+    tex_idx = indices_tex(collect(files), lambda p: scans.get(p) or "–")
     title = ", ".join(h["title"] for h in heads)
     pages = f"{heads[0]['pages'][0]}–{heads[-1]['pages'][1]}"
 

@@ -113,6 +113,7 @@ from it unchanged. TEI stays an export.
 | 1931 footnote | `{{< fn >}}…इति पाठः{{< /fn >}}` after its lemma: the edition's own notes | – | numbered footnote |
 | Margin heading | `{{< mn >}}नागपूजा ।{{< /mn >}}`: a side-heading printed in the 1931 margin | – | margin note |
 | Doubtful reading | `[?]` after the word, until someone checks the page image | – | red `[?]` |
+| Missing pages | `{{< pg 150 >}}{{< pg 151 >}}{{< gap 150 151 >}}` where printed pages are not in the scan | `p150` | note in place of the text |
 | Figure | `{{< fig "kunda-chaturasra" >}}`, redrawn as SVG | `fig.<slug>` | – |
 
 IDs are tied to the printed page, so "SK p.87" and `…/damanaka-utsavah/#p87.3` point to the same place in print and

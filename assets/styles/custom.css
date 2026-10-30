@@ -21,6 +21,9 @@
 }
 .sk-pg:target { color: var(--sk-accent) !important; }
 
+/* Pages missing from the scan. */
+.sk-gap { font: .85rem system-ui, sans-serif; color: var(--sk-muted); }
+
 /* Paragraph and verse anchors, shown on hover. */
 .sk-anchor, .sk-cite {
   font: .75rem system-ui, sans-serif; color: var(--sk-muted) !important; text-decoration: none !important;

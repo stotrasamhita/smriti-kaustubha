@@ -21,6 +21,8 @@ function Span(el)
   local c = el.classes
   if c:includes("pg") then
     return raw("\\skpg{" .. pandoc.utils.stringify(el.content) .. "}")
+  elseif c:includes("gap") then
+    return raw("\\skgap{" .. pandoc.utils.stringify(el.content) .. "}")
   elseif c:includes("corr") then
     -- Our correction: print the corrected text, record the OCR reading in apparatus series A.
     return wrap("\\skcorr{", el.content, "}{" .. esc(el.attributes.ocr or "") .. "}")

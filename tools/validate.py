@@ -25,7 +25,7 @@ CONTENT = ROOT / "content"
 STATUSES = ["ocr", "cleaned", "proofread-1", "proofread-2", "final"]
 REQUIRED = ["title", "id", "didhiti", "section", "pages", "scan_pages", "status", "sources"]
 PAIRED = {"shloka", "q", "corr", "em", "var", "fn", "mn"}
-SINGLE = {"pg", "fig", "ix"}
+SINGLE = {"pg", "fig", "ix", "gap"}
 
 SHORTCODE = re.compile(r"\{\{<\s*(/?)(\w+)((?:\s+[^>]*?)?)\s*>\}\}")
 ATTR = re.compile(r'(\w+)="([^"]*)"')

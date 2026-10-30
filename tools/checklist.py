@@ -7,6 +7,7 @@ Pass 1 readers work through it with the page images open (spec §5 step 5). Rege
 """
 import re
 import sys
+import tomllib
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -31,14 +32,14 @@ def context(text, start, end, width=28):
 
 
 def main(section):
-    offset = None
+    # Scan numbers from data/pages.toml: the scan → page offset drifts (pp.150–151 are not in the scan).
+    scans = {v["printed"]: v["scan"] for v in tomllib.loads((ROOT / "data/pages.toml").read_text(encoding="utf-8")).values()}
     rows = {}
     page = None
     for f in content_files():
         if f.parent.name != section:
             continue
         fm, body, _ = split_front_matter(f.read_text(encoding="utf-8"), f)
-        offset = fm["scan_pages"][0] - fm["pages"][0]
         page = page or fm["pages"][0]
         for m in TOKEN.finditer(body):
             if m.group(1):
@@ -58,7 +59,7 @@ def main(section):
     flagged = sum(1 for v in rows.values() for r in v if r.startswith("| **[?]**"))
     print(f"{total} items on {len(rows)} pages, {flagged} flagged `[?]`.\n")
     for p in sorted(rows):
-        print(f"## p.{p} (scan {p + offset:03d})\n")
+        print(f"## p.{p} (scan {scans[p]:03d})\n")
         print("| OCR read | we print | context | ok |\n|---|---|---|---|")
         print("\n".join(rows[p]) + "\n")
 
