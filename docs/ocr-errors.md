@@ -103,3 +103,9 @@ Structural problems, beyond the word-level errors above:
   stray syllable after them (p.253 "तु जा-"); they are not part of the text.
 - Common in the vrata manuals: व्र read as व/त्र (वत for व्रत, यवत्रीहि for यवव्रीहि), र्घ्य read as र्य/य॑
   (दद्यार्थ्य, आनयेय॑पात्रं), ष्ठ read as ष्ट/ट (षष्टी, पट्यां), and न्त्र read as त्र (मत्र).
+
+## Found in Āśvina (pp.287–357)
+- **Misread page numbers**: scan 314 gives the printed number as 295 for p.297. `tools/extract_pages.py` trusts a legible
+  number over the offset, so check its output against the running sequence before writing the `pg` markers.
+- In the prayoga sections the OCR often reads र्क्ष as a visarga (श्रवणः for श्रवणर्क्षे) and drops the र् of र्घ्य
+  and र्म (अयं for अर्घ्यं, कमं for कर्म); Vedic pratīkas and ṛṣi names are best left marked `[?]` unless certain.

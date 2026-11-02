@@ -733,3 +733,95 @@ name = "याज्ञवल्क्यः"
 iast = "Yājñavalkya"
 type = "smrti"
 seen = ["याज्ञवल्क्यीयवचसि"]
+
+# Added with the Āśvina-kṛtyam (pp.287–357).
+
+[damara-kalpa]
+name = "डामरकल्पः"
+iast = "Ḍāmara-kalpa"
+type = "agama"
+seen = ["डामरकल्पे", "डामरकल्पवाक्यसंवादात्"]
+
+[dhavala-nibandha]
+name = "धवलनिबन्धः"
+iast = "Dhavala-nibandha"
+type = "nibandha"
+seen = ["धवलनिबन्धे (OCR धवलनिन्बधे, धवलनिवन्धे)"]
+
+[durga-bhakti-tarangini]
+name = "दुर्गाभक्तितरङ्गिणी"
+iast = "Durgā-bhakti-taraṅgiṇī"
+type = "nibandha"
+seen = ["दुर्गाभक्तितरङ्गिण्याम्"]
+
+[gopatha-brahmana]
+name = "गोपथब्राह्मणम्"
+iast = "Gopatha-brāhmaṇa"
+type = "samhita"
+seen = ["गोपथब्राह्मणे"]
+
+[jnanarnava]
+name = "ज्ञानार्णवः"
+iast = "Jñānārṇava"
+type = "agama"
+seen = ["ज्ञानार्णवे"]
+
+[kalika-purana]
+name = "कालिकापुराणम्"
+iast = "Kālikā-purāṇa"
+type = "upapurana"
+seen = ["कालिकापुराणे", "कालिकापुराणात्"]
+
+[kashyapa]
+name = "कश्यपः"
+iast = "Kaśyapa"
+type = "smrti"
+seen = ["कश्यपवचनात्"]
+
+[nandi-purana]
+name = "नन्दिपुराणम्"
+iast = "Nandi-purāṇa"
+type = "upapurana"
+seen = ["नन्दिपुराणे", "नन्दिपुराणात्"]
+
+[nirnaya-shiromani]
+name = "निर्णयशिरोमणिः"
+iast = "Nirṇaya-śiromaṇi"
+type = "nibandha"
+seen = ["निर्णयशिरोमणिवचनेन"]
+
+[nrsimha-prasada]
+name = "नृसिंहप्रसादः"
+iast = "Nṛsiṃha-prasāda"
+type = "nibandha"
+seen = ["नृसिंहप्रसादे"]
+
+[prataparudra]
+name = "प्रतापरुद्रः"
+iast = "Pratāparudra"
+type = "nibandha"
+seen = ["प्रतापरुद्रे"]
+
+[rudrayamala]
+name = "रुद्रयामलम्"
+iast = "Rudra-yāmala"
+type = "agama"
+seen = ["रुद्रयामले", "रुद्रयामलोक्तेः"]
+
+[satyavrata]
+name = "सत्यव्रतः"
+iast = "Satyavrata"
+type = "smrti"
+seen = ["सत्यव्रतोक्तेः"]
+
+[sharada-tilaka]
+name = "शारदातिलकम्"
+iast = "Śāradā-tilaka"
+type = "agama"
+seen = ["शारदातिलकोक्तेः"]
+
+[varahi-tantra]
+name = "वाराहीतन्त्रम्"
+iast = "Vārāhī-tantra"
+type = "agama"
+seen = ["वाराहीतन्त्रे"]
