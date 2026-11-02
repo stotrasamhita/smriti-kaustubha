@@ -575,3 +575,161 @@ name = "यमः"
 iast = "Yama"
 type = "smrti"
 seen = ["इति यमवाक्ये"]
+
+# Added with the Bhādrapada-kṛtyam (pp.201–287).
+
+[bhakti-candrodaya]
+name = "भक्तिचन्द्रोदयः"
+iast = "Bhakti-candrodaya"
+type = "nibandha"
+seen = ["भक्तिचन्द्रोदये"]
+
+[brhannaradiya]
+name = "बृहन्नारदीयपुराणम्"
+iast = "Bṛhannāradīya-purāṇa"
+type = "upapurana"
+seen = ["बृहन्नारदीयवचनात्"]
+
+[caturvimshati-mata]
+name = "चतुर्विंशतिमतम्"
+iast = "Caturviṃśati-mata"
+type = "smrti"
+seen = ["चतुर्विंशतिमते"]
+
+[chagaleya]
+name = "छागलेयः"
+iast = "Chāgaleya"
+type = "smrti"
+seen = ["छागलेयः"]
+
+[daksha]
+name = "दक्षः"
+iast = "Dakṣa"
+type = "smrti"
+seen = ["दक्षोक्तेः"]
+
+[devala]
+name = "देवलः"
+iast = "Devala"
+type = "smrti"
+seen = ["देवलः"]
+
+[dhaumya]
+name = "धौम्यः"
+iast = "Dhaumya"
+type = "smrti"
+seen = ["धौम्यवचनात्"]
+
+[divodasa]
+name = "दिवोदासः"
+iast = "Divodāsa"
+type = "nibandha"
+seen = ["दिवोदासीयवचनात्"]
+
+[harita]
+name = "हारीतः"
+iast = "Hārīta"
+type = "smrti"
+seen = ["हारीतोक्तेः"]
+
+[jatukarnya]
+name = "जातूकर्ण्यः"
+iast = "Jātūkarṇya"
+type = "smrti"
+seen = ["जातूकर्ण्यवचनस्य"]
+
+[kurma-purana]
+name = "कूर्मपुराणम्"
+iast = "Kūrma-purāṇa"
+type = "purana"
+seen = ["कौर्मे (OCR कौम, p.286)"]
+
+[maitrayaniya-parishishta]
+name = "मैत्रायणीयपरिशिष्टम्"
+iast = "Maitrāyaṇīya-pariśiṣṭa"
+type = "sutra"
+seen = ["मैत्रायणीयपरिशिष्टात्"]
+
+[manu]
+name = "मनुः"
+iast = "Manu"
+type = "smrti"
+seen = ["मनुवचनात्", "मनूक्तेः"]
+
+[marici]
+name = "मरीचिः"
+iast = "Marīci"
+type = "smrti"
+seen = ["मरीचिवचनात्"]
+
+[nirnaya-dipa]
+name = "निर्णयदीपः"
+iast = "Nirṇaya-dīpa"
+type = "nibandha"
+seen = ["निर्णयदीपे"]
+
+[pracetas]
+name = "प्रचेताः"
+iast = "Pracetas"
+type = "smrti"
+seen = ["प्रचेताः"]
+
+[prayoga-parijata]
+name = "प्रयोगपारिजातः"
+iast = "Prayoga-pārijāta"
+type = "nibandha"
+seen = ["प्रयोगपारिजाते", "प्रयोगपारिजातः"]
+
+[ratnamala]
+name = "रत्नमाला"
+iast = "Ratnamālā"
+type = "jyotisa"
+seen = ["रत्नमालायाम्"]
+
+[shakatayana]
+name = "शाकटायनः"
+iast = "Śākaṭāyana"
+type = "smrti"
+seen = ["शाकटायनवचः"]
+
+[shankha]
+name = "शङ्खः"
+iast = "Śaṅkha"
+type = "smrti"
+seen = ["शङ्खस्मृतेः", "शङ्खः"]
+
+[smrti-darpana]
+name = "स्मृतिदर्पणः"
+iast = "Smṛti-darpaṇa"
+type = "nibandha"
+seen = ["स्मृतिदर्पणे"]
+
+[sraddha-dipakalika]
+name = "श्राद्धदीपकलिका"
+iast = "Śrāddha-dīpakalikā"
+type = "nibandha"
+seen = ["श्राद्धदीपकलिकायां"]
+
+[sumantu]
+name = "सुमन्तुः"
+iast = "Sumantu"
+type = "smrti"
+seen = ["सुमन्तुः"]
+
+[vrddha-manu]
+name = "वृद्धमनुः"
+iast = "Vṛddha-manu"
+type = "smrti"
+seen = ["वृद्धमनुवाक्येन"]
+
+[vyasa]
+name = "व्यासः"
+iast = "Vyāsa"
+type = "smrti"
+seen = ["व्यासः"]
+
+[yajnavalkya]
+name = "याज्ञवल्क्यः"
+iast = "Yājñavalkya"
+type = "smrti"
+seen = ["याज्ञवल्क्यीयवचसि"]

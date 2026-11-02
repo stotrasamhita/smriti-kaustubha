@@ -94,3 +94,12 @@ Structural problems, beyond the word-level errors above:
 - Anusvāra on य/र्य is regularly dropped (कार्य for कार्यं), and "पूर्वविद्वैव" for पूर्वविद्धैव.
 - p.107: metre (upajāti, 11 syllables) favours "गङ्गाजलेऽर्कग्रहकोटितुल्या" over the "ग्रहकोटि" suggested above;
   both are marked `[?]` in the text.
+
+## Found in Bhādrapada (pp.201–287)
+- **Running-head words inside the text**: the head word of the facing column can be read into a broken word at
+  the line where it sits, e.g. p.275 "व्य-अविधवा-वस्था" (व्यवस्था) and p.285 "सर्वपापविनाशि-कपिला-नीम्"
+  (सर्वपापविनाशिनीम्). Look for a section name in the middle of a hyphenated word.
+- **Signature marks** ("२२ स्मृ० कौ०", "२४ स्मृ० को") come out as footnotes or in the body, sometimes with a
+  stray syllable after them (p.253 "तु जा-"); they are not part of the text.
+- Common in the vrata manuals: व्र read as व/त्र (वत for व्रत, यवत्रीहि for यवव्रीहि), र्घ्य read as र्य/य॑
+  (दद्यार्थ्य, आनयेय॑पात्रं), ष्ठ read as ष्ट/ट (षष्टी, पट्यां), and न्त्र read as त्र (मत्र).

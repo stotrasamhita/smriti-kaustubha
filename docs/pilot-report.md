@@ -1,8 +1,9 @@
-# Phase 0 pilot report: Caitra- to Śrāvaṇa-kṛtyam (printed pp.85–200)
+# Phase 0 pilot report: Caitra- to Bhādrapada-kṛtyam (printed pp.85–287)
 
-Status on 2026-10-30. The pilot was planned for the Caitra-kṛtyam (pp.85–108); the Vaiśākha-kṛtyam
+Status on 2026-11-02. The pilot was planned for the Caitra-kṛtyam (pp.85–108); the Vaiśākha-kṛtyam
 (pp.108–117, scan 127–136), the Jyeṣṭha-kṛtyam (pp.117–137, scan 136–156), the Āṣāḍha-kṛtyam
-(pp.137–148, scan 156–167) and the Śrāvaṇa-kṛtyam (pp.148–200, scan 167–217) were added so that whole months can be circulated for comment. The pilot's gate (spec §9) is "pilot site and PDF approved; text model frozen". This report
+(pp.137–148, scan 156–167), the Śrāvaṇa-kṛtyam (pp.148–200, scan 167–217) and the Bhādrapada-kṛtyam
+(pp.201–287, scan 218–304) were added so that whole months can be circulated for comment. The pilot's gate (spec §9) is "pilot site and PDF approved; text model frozen". This report
 says what is ready for that review and what is still missing.
 
 ## Deliverables
@@ -19,16 +20,16 @@ says what is ready for that review and what is still missing.
 
 | | Count |
 |---|---|
-| | Caitra (pp.85–108) | Vaiśākha (pp.108–117) | Jyeṣṭha (pp.117–137) | Āṣāḍha (pp.137–148) | Śrāvaṇa (pp.148–200) |
-|---|---|---|---|---|---|
-| Topic files | 10 | 5 | 8 | 4 | 16 |
-| Paragraphs with stable IDs / set verses | 44 / 10 | 19 / 0 | 18 / 0 | 19 / 0 | 86 / 0 |
-| Quotations tagged (`q`) | 122 | 48 | 47 | 75 | 231 |
-| OCR corrections tagged (`corr`) | 259 | 120 | 281 | 145 | 677 |
-| Doubtful readings `[?]` | 43 | 18 | 40 | 19 | 65 |
-| 1931 footnotes (`fn`) | 29 | 11 | 19 | 4 | 30 |
+| | Caitra (pp.85–108) | Vaiśākha (pp.108–117) | Jyeṣṭha (pp.117–137) | Āṣāḍha (pp.137–148) | Śrāvaṇa (pp.148–200) | Bhādrapada (pp.201–287) |
+|---|---|---|---|---|---|---|
+| Topic files | 10 | 5 | 8 | 4 | 16 | 37 |
+| Paragraphs with stable IDs / set verses | 44 / 10 | 19 / 0 | 18 / 0 | 19 / 0 | 86 / 0 | 96 / 0 |
+| Quotations tagged (`q`) | 122 | 48 | 47 | 75 | 231 | 427 |
+| OCR corrections tagged (`corr`) | 259 | 120 | 281 | 145 | 677 | 1223 |
+| Doubtful readings `[?]` | 43 | 18 | 40 | 19 | 65 | 124 |
+| 1931 footnotes (`fn`) | 29 | 11 | 19 | 4 | 30 | 22 |
 
-Cited works in `data/sources.toml`: 93.
+Cited works in `data/sources.toml`: 119.
 
 Jyeṣṭha notes: the Vaṭa-sāvitrī pūjā (pp.126–128) is a ritual the author copies whole from another manual
 ("अन्यग्रन्थीया"), so its mantras are not tagged as quotations. The Sāvitrī story (pp.128–134) is introduced as
@@ -50,6 +51,17 @@ is closed as Brahmāṇḍa-purāṇa and tagged so. The Kaumārī-pūjā passag
 copy's OCR was used to check the other, and the readings both lose (कुमारी[र्भो]जयेत्) stay `[?]`. Topic
 titles follow the running heads; नागपञ्चम्यादि, रक्षाबन्धविधिः, उत्सर्जनम् and कौमारीपूजा कुशग्रहणं च are
 editorial.
+
+Bhādrapada notes: the month is mostly vrata manuals (Haratālikā, Gaṇeśa-caturthī, Ṛṣipañcamī, Mahālakṣmī,
+Śravaṇa-dvādaśī, Ananta-caturdaśī, Kapilāṣaṣṭhī) with their kathās and udyāpanas, followed by the Mahālaya
+and the other śrāddhas of the dark fortnight. It is split into 37 topic files: the running heads where they
+exist, and editorial titles where a vrata, its kathā and its udyāpana share one head. The offset is 17 for the
+whole month. Twice the OCR mixes the running head into a word on the page (p.275 "व्य-अविधवा-वस्था", p.285
+"विनाशि-कपिला-नीम्"); both are recorded as corrections. The OCR of p.283 (Kapilāṣaṣṭhī arghya rite) is badly
+garbled; its prose glosses are left as read and marked `[?]`, and only the verses are restored. The month
+closes "इति कौस्तुभे महालयनिर्णयः" and the colophon verses on p.287, where the Āśvina-kṛtyam begins; the second
+verse is garbled in the OCR ("योऽनन्तदेवलाभाद्रस्य") and stays `[?]`. The Kapilāṣaṣṭhī (kṛṣṇa 6, amānta tithi
+21) is placed by the author after the Āśvina-śukla pratipad śrāddha; the order of the print is kept.
 
 Every correction keeps the OCR reading (`{{< corr ocr="…" >}}`) and shows on the web as a highlight with the OCR
 reading on hover. The PDF reading copy prints the corrected text silently and logs every correction in
@@ -82,9 +94,9 @@ since no running head names those pages: वैशाखमासकृत्य
 
 ## Still missing before the gate
 
-1. **Page images** at 400 dpi for scan 104–127, then proof-reading pass 1 and pass 2 (different readers) using
-   `docs/proofreading/caitra-krtyam.md`, `vaisakha-krtyam.md`, `jyestha-krtyam.md`, `ashadha-krtyam.md` and
-   `shravana-krtyam.md`; and a copy of the missing pp.150–151. Status moves `cleaned → proofread-1 → proofread-2`.
+1. **Page images** at 400 dpi for scan 104–304, then proof-reading pass 1 and pass 2 (different readers) using
+   `docs/proofreading/caitra-krtyam.md`, `vaisakha-krtyam.md`, `jyestha-krtyam.md`, `ashadha-krtyam.md`,
+   `shravana-krtyam.md` and `bhadrapada-krtyam.md`; and a copy of the missing pp.150–151. Status moves `cleaned → proofread-1 → proofread-2`.
 2. Indices not yet built: subject index and glossary (need `ix` tags and `data/glossary.toml`); the verse-pāda
    index covers set verses only (see the run-in verse question in spec §9).
 3. PDF polish: Tiro Devanagari Sanskrit could not be installed in the build environment, so the PDF falls back
