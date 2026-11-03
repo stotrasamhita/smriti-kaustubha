@@ -109,3 +109,14 @@ Structural problems, beyond the word-level errors above:
   number over the offset, so check its output against the running sequence before writing the `pg` markers.
 - In the prayoga sections the OCR often reads र्क्ष as a visarga (श्रवणः for श्रवणर्क्षे) and drops the र् of र्घ्य
   and र्म (अयं for अर्घ्यं, कमं for कर्म); Vedic pratīkas and ṛṣi names are best left marked `[?]` unless certain.
+
+## Found in Kārttika (pp.358–427)
+- **Text read into the running head**: the head lines of a page can take a line or a syllable of the body, e.g.
+  p.373 (the end of the Naraka-caturdaśī topic, "…चतुर्दशीसत्त्वं वक्तुमित्यलम्") and p.404 ("वाय" of "भवाय",
+  split at the page turn). Read the `head:` comment of each scan in the draft before writing the page.
+- **Margin side-headings inside a verse**: "यमद्विती-" (p.377), "बलिपूजा" (p.376) and "अन्नकूटः" (p.374) are run into
+  the text; restore them as `mn`.
+- **Footnotes run into the body**: on p.385 the two footnotes come after the last line ("पञ्चमे दिवसे १ कुर्यात् ।
+  २ अरविन्दम्…"); on p.393 note 2 is inline. Their anchors are not always recoverable; mark the place `[?]`.
+- Frequent in the dāna and vṛṣotsarga prayogas: स्न read as स/न (सापयेत्, नात्वा), ह्न/ह्ण read as ह (मध्याहे),
+  द्द/द्ध read as ह (तहिने, तहान), त्र read as न (ताम्रपाने, गोने).

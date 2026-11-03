@@ -825,3 +825,29 @@ name = "वाराहीतन्त्रम्"
 iast = "Vārāhī-tantra"
 type = "agama"
 seen = ["वाराहीतन्त्रे"]
+
+# Added with the Kārttika-kṛtyam (pp.358–427).
+
+[jimutavahana]
+name = "जीमूतवाहनः"
+iast = "Jīmūtavāhana"
+type = "nibandha"
+seen = ["जीमूतवाहनोदाहृतवाक्ये"]
+
+[prachya-nibandha]
+name = "प्राच्यनिबन्धः"
+iast = "Prācya-nibandha"
+type = "nibandha"
+seen = ["प्राच्यनिबन्धे"]
+
+[sanatkumara-samhita]
+name = "सनत्कुमारसंहिता"
+iast = "Sanatkumāra-saṃhitā"
+type = "samhita"
+seen = ["सनत्कुमारसंहितायां"]
+
+[vishnu-yamala]
+name = "विष्णुयामलम्"
+iast = "Viṣṇu-yāmala"
+type = "agama"
+seen = ["विष्णुयामले"]
