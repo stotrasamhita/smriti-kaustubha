@@ -1,5 +1,5 @@
 # Local builds. See pdf/README.md and tools/ for what each step does.
-SECTIONS ?= caitra-krtyam vaisakha-krtyam jyestha-krtyam ashadha-krtyam shravana-krtyam bhadrapada-krtyam ashvina-krtyam kartika-krtyam margashirsha-krtyam
+SECTIONS ?= caitra-krtyam vaisakha-krtyam jyestha-krtyam ashadha-krtyam shravana-krtyam bhadrapada-krtyam ashvina-krtyam kartika-krtyam margashirsha-krtyam pausha-krtyam
 # One PDF for all finished months of the Saṃvatsara-dīdhiti; its name stays stable as months are added.
 PDFNAME ?= sk-samvatsara
 comma := ,

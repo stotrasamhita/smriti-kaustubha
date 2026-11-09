@@ -1,10 +1,11 @@
-# Phase 0 pilot report: Caitra- to Mārgaśīrṣa-kṛtyam (printed pp.85–432)
+# Phase 0 pilot report: Caitra- to Pauṣa-kṛtyam (printed pp.85–439)
 
-Status on 2026-11-09. The pilot was planned for the Caitra-kṛtyam (pp.85–108); the Vaiśākha-kṛtyam
+Status on 2026-11-09 (Pauṣa added). The pilot was planned for the Caitra-kṛtyam (pp.85–108); the Vaiśākha-kṛtyam
 (pp.108–117, scan 127–136), the Jyeṣṭha-kṛtyam (pp.117–137, scan 136–156), the Āṣāḍha-kṛtyam
 (pp.137–148, scan 156–167), the Śrāvaṇa-kṛtyam (pp.148–200, scan 167–217), the Bhādrapada-kṛtyam
 (pp.201–287, scan 218–304), the Āśvina-kṛtyam (pp.287–357, scan 304–374), the Kārttika-kṛtyam
-(pp.358–427, scan 375–444) and the Mārgaśīrṣa-kṛtyam (pp.427–432, scan 444–449) were added so that whole months can be circulated for comment. The pilot's gate (spec §9) is "pilot site and PDF approved; text model frozen". This report
+(pp.358–427, scan 375–444) the Mārgaśīrṣa-kṛtyam (pp.427–432, scan 444–449) and the
+Pauṣa-kṛtyam (pp.432–439, scan 449–456) were added so that whole months can be circulated for comment. The pilot's gate (spec §9) is "pilot site and PDF approved; text model frozen". This report
 says what is ready for that review and what is still missing.
 
 ## Deliverables
@@ -21,14 +22,14 @@ says what is ready for that review and what is still missing.
 
 | | Count |
 |---|---|
-| | Caitra (pp.85–108) | Vaiśākha (pp.108–117) | Jyeṣṭha (pp.117–137) | Āṣāḍha (pp.137–148) | Śrāvaṇa (pp.148–200) | Bhādrapada (pp.201–287) | Āśvina (pp.287–357) | Kārttika (pp.358–427) | Mārgaśīrṣa (pp.427–432) |
-|---|---|---|---|---|---|---|---|---|---|
-| Topic files | 10 | 5 | 8 | 4 | 16 | 37 | 26 | 38 | 5 |
-| Paragraphs with stable IDs / set verses | 44 / 10 | 19 / 0 | 18 / 0 | 19 / 0 | 86 / 0 | 96 / 0 | 67 / 0 | 67 / 0 | 7 / 0 |
-| Quotations tagged (`q`) | 122 | 48 | 47 | 75 | 231 | 427 | 334 | 224 | 24 |
-| OCR corrections tagged (`corr`) | 259 | 120 | 281 | 145 | 677 | 1223 | 989 | 1076 | 73 |
-| Doubtful readings `[?]` | 43 | 18 | 40 | 19 | 65 | 124 | 131 | 125 | 7 |
-| 1931 footnotes (`fn`) | 29 | 11 | 19 | 4 | 30 | 22 | 23 | 13 | 0 |
+| | Caitra (pp.85–108) | Vaiśākha (pp.108–117) | Jyeṣṭha (pp.117–137) | Āṣāḍha (pp.137–148) | Śrāvaṇa (pp.148–200) | Bhādrapada (pp.201–287) | Āśvina (pp.287–357) | Kārttika (pp.358–427) | Mārgaśīrṣa (pp.427–432) | Pauṣa (pp.432–439) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Topic files | 10 | 5 | 8 | 4 | 16 | 37 | 26 | 38 | 5 | 4 |
+| Paragraphs with stable IDs / set verses | 44 / 10 | 19 / 0 | 18 / 0 | 19 / 0 | 86 / 0 | 96 / 0 | 67 / 0 | 67 / 0 | 7 / 0 | 9 / 0 |
+| Quotations tagged (`q`) | 122 | 48 | 47 | 75 | 231 | 427 | 334 | 224 | 24 | 17 |
+| OCR corrections tagged (`corr`) | 259 | 120 | 281 | 145 | 677 | 1223 | 989 | 1076 | 73 | 112 |
+| Doubtful readings `[?]` | 43 | 18 | 40 | 19 | 65 | 124 | 131 | 125 | 7 | 19 |
+| 1931 footnotes (`fn`) | 29 | 11 | 19 | 4 | 30 | 22 | 23 | 13 | 0 | 1 |
 
 Cited works in `data/sources.toml`: 138.
 
@@ -98,6 +99,16 @@ pratyavarohaṇa with its ṛṣi/devatā/chandas lists. The Bhairava-jayantī a
 "कार्तिकस्यासिताष्टमी" and "मार्गशीर्षासिताष्टमी" (amānta and pūrṇimānta reckoning) and is tagged as tithi 23 of
 month 8; the other topics are month 9. No new cited works.
 
+Pauṣa notes: from "अथ पौषकृत्यं" (p.432) to "इति पौषकृत्यानि" (p.439), where "अथ माघमासकृत्यम्" begins on the same
+page. Nearly all of it is the aṣṭakā rite after Āśvalāyana and his commentators (Vṛttikāra, Jayanta, the
+Kārikā): how many aṣṭakās and when, then full prayogas of the pūrvedyuḥ-śrāddha, the aṣṭakā homa and the
+anvaṣṭakya with the mothers' pārvaṇa and the ūha of the mantras for one, two or many mothers. These prayoga pages are
+dense with abbreviated mantra pratīkas, and the OCR garbles several (e.g. "अन्योमरीचिभ्यो", "ओदनायगवं"); they are
+left as read and marked `[?]`. The first aṣṭakā is "पौषकृष्णाष्टमी" in the text's pūrṇimānta reckoning; these
+topics are tagged amānta Mārgaśīrṣa kṛṣṇa 7–9 (tithis 22–24 of month 9), as with the Bhairava-jayantī. The month
+ends with the Mahābhadrā aṣṭamī and the Puṣya full moon (month 10). The printed numbers of pp.434 and 436 are
+illegible in the scan; the offset (17) fixes them. No new cited works.
+
 Every correction keeps the OCR reading (`{{< corr ocr="…" >}}`) and shows on the web as a highlight with the OCR
 reading on hover. The PDF reading copy prints the corrected text silently and logs every correction in
 `<name>-corrections.tsv`; the draft copy (`--draft`) prints them as apparatus notes "lemma ] OCR reading". Corrections were made from context,
@@ -131,7 +142,7 @@ since no running head names those pages: वैशाखमासकृत्य
 
 1. **Page images** at 400 dpi for scan 104–374, then proof-reading pass 1 and pass 2 (different readers) using
    `docs/proofreading/caitra-krtyam.md`, `vaisakha-krtyam.md`, `jyestha-krtyam.md`, `ashadha-krtyam.md`,
-   `shravana-krtyam.md`, `bhadrapada-krtyam.md`, `ashvina-krtyam.md`, `kartika-krtyam.md` and `margashirsha-krtyam.md`; and a copy of the missing pp.150–151. Status moves `cleaned → proofread-1 → proofread-2`.
+   `shravana-krtyam.md`, `bhadrapada-krtyam.md`, `ashvina-krtyam.md`, `kartika-krtyam.md`, `margashirsha-krtyam.md` and `pausha-krtyam.md`; and a copy of the missing pp.150–151. Status moves `cleaned → proofread-1 → proofread-2`.
 2. Indices not yet built: subject index and glossary (need `ix` tags and `data/glossary.toml`); the verse-pāda
    index covers set verses only (see the run-in verse question in spec §9).
 3. PDF polish: Tiro Devanagari Sanskrit could not be installed in the build environment, so the PDF falls back
