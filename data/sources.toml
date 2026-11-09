@@ -851,3 +851,11 @@ name = "विष्णुयामलम्"
 iast = "Viṣṇu-yāmala"
 type = "agama"
 seen = ["विष्णुयामले"]
+
+# Added with the Māgha-kṛtyam (pp.439–513).
+
+[prayaga-setu]
+name = "प्रयागसेतुः"
+iast = "Prayāga-setu"
+type = "nibandha"
+seen = ["प्रयागसेतौ"]

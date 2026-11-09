@@ -24,10 +24,11 @@ Bhādrapada-kṛtyam (pp.201–287, scan 218–304), the Āśvina-kṛtyam (pp.2
 (pp.358–427, scan 375–444; it ends at "इति कार्तिकमासकृत्यम्" on p.427, where the Mārgaśīrṣa-kṛtyam begins; its
 dark-fortnight topics on pp.367–373 are tagged month 7) and the Mārgaśīrṣa-kṛtyam (pp.427–432, scan 444–449; it
 ends at "इति मार्गशीर्षकृत्यम्" on p.432, where the Pauṣa-kṛtyam begins) and the Pauṣa-kṛtyam (pp.432–439, scan 449–456; it ends at
-"इति पौषकृत्यानि" on p.439, where the Māgha-kṛtyam begins; its aṣṭakā topics are tagged month 9). Process further
-months only when the maintainer asks for them.
+"इति पौषकृत्यानि" on p.439, where the Māgha-kṛtyam begins; its aṣṭakā topics are tagged month 9) and the Māgha-kṛtyam
+(pp.439–513, scan 456–530; it ends at "इति माघकृत्यम्" on p.513, where the Phālguna-kṛtyam begins; its Śivarātri topics
+are amānta Māgha kṛṣṇa 14, month 11 tithi 29). Process further months only when the maintainer asks for them.
 
-Pilot state (see `docs/pilot-report.md`): all ten sections are in `content/samvatsara/` at status `cleaned`
+Pilot state (see `docs/pilot-report.md`): all eleven sections are in `content/samvatsara/` at status `cleaned`
 (machine cleanup + tagging, no proof-reading against images). Site, PDF and indices build. Next: page images,
 then proof-reading passes 1 and 2 from `docs/proofreading/<section>.md`.
 
