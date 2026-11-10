@@ -859,3 +859,11 @@ name = "प्रयागसेतुः"
 iast = "Prayāga-setu"
 type = "nibandha"
 seen = ["प्रयागसेतौ"]
+
+# Added with the adhimāsa to Kali chapters (pp.520–580).
+
+[shatatapa]
+name = "शातातपः"
+iast = "Śātātapa"
+type = "smrti"
+seen = ["शातातपः", "शातातपोक्तेः", "शातातपवाक्येन", "बृहच्छातातपः"]

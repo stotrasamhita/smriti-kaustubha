@@ -9,7 +9,7 @@ title = "स्मृतिकौस्तुभः"
 A digital edition of the **Smṛti-kaustubha** of Anantadeva (Nirṇaya Sāgara Press, 2nd ed., 1931).
 Pick a script from the menu at the top; the text is stored in Devanāgarī and transliterated in your browser.
 
-**Phase 0 pilot:** only the Caitra- to Phālguna-kṛtyam (printed pp.85–519) are here so far. It has had a machine
+**Phase 0 pilot:** only the Saṃvatsara-dīdhiti (printed pp.83–580) is here so far. It has had a machine
 cleanup but **no proof-reading against the page images yet**. Words marked <span class="sk-corr">like this</span>
 are corrections of the OCR (hover to see what the OCR read); `[?]` marks a reading someone must check on the page.
 

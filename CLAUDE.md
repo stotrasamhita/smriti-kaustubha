@@ -27,10 +27,14 @@ ends at "इति मार्गशीर्षकृत्यम्" on p.432
 "इति पौषकृत्यानि" on p.439, where the Māgha-kṛtyam begins; its aṣṭakā topics are tagged month 9) and the Māgha-kṛtyam
 (pp.439–513, scan 456–530; it ends at "इति माघकृत्यम्" on p.513, where the Phālguna-kṛtyam begins; its Śivarātri topics
 are amānta Māgha kṛṣṇa 14, month 11 tithi 29) and the Phālguna-kṛtyam (pp.513–519, scan 530–536; it ends at
-"इति फाल्गुनकृत्यम्" on p.519; the adhika-māsa material begins on p.520). Process further material only when the
-maintainer asks for it.
+"इति फाल्गुनकृत्यम्" on p.519). The rest of the Saṃvatsara-dīdhiti followed: the opening verses (section `upakramah`,
+pp.83–84, scan 102–103, offset 19) and the chapters after the months, each closing with its own dīdhiti verse and each a
+section without month tags: `adhimasa` (pp.520–529), `candrabda` (pp.529–530), `sankranti` (pp.530–548), `saurabda`
+(pp.548–554), `savanabda` (pp.554–557), `barhaspatya` (pp.557–560), `nakshatra` (pp.560–566) and `kali` (pp.567–580,
+ending "इति स्मृतिकौस्तुभे संवत्सरदीधितिः संपूर्णा"). The whole Saṃvatsara-dīdhiti (pp.83–580, scan 102–597) is now in.
+The Āśauca-dīdhiti (from p.581, scan 598) is untouched; process it only when the maintainer asks for it.
 
-Pilot state (see `docs/pilot-report.md`): all twelve sections are in `content/samvatsara/` at status `cleaned`
+Pilot state (see `docs/pilot-report.md`): all twenty-one sections are in `content/samvatsara/` at status `cleaned`
 (machine cleanup + tagging, no proof-reading against images). Site, PDF and indices build. Next: page images,
 then proof-reading passes 1 and 2 from `docs/proofreading/<section>.md`.
 

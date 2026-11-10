@@ -5,8 +5,8 @@
 
 ```sh
 make pdf     # both copies below, for every section listed in SECTIONS in the Makefile
-python3 tools/build_pdf.py --section caitra-krtyam,vaisakha-krtyam,jyestha-krtyam,ashadha-krtyam,shravana-krtyam,bhadrapada-krtyam,ashvina-krtyam,kartika-krtyam,margashirsha-krtyam,pausha-krtyam,magha-krtyam,phalguna-krtyam --name sk-samvatsara          # reading copy
-python3 tools/build_pdf.py --section caitra-krtyam,vaisakha-krtyam,jyestha-krtyam,ashadha-krtyam,shravana-krtyam,bhadrapada-krtyam,ashvina-krtyam,kartika-krtyam,margashirsha-krtyam,pausha-krtyam,magha-krtyam,phalguna-krtyam --name sk-samvatsara-draft --draft
+python3 tools/build_pdf.py --section upakramah,caitra-krtyam,vaisakha-krtyam,jyestha-krtyam,ashadha-krtyam,shravana-krtyam,bhadrapada-krtyam,ashvina-krtyam,kartika-krtyam,margashirsha-krtyam,pausha-krtyam,magha-krtyam,phalguna-krtyam,adhimasa,candrabda,sankranti,saurabda,savanabda,barhaspatya,nakshatra,kali --name sk-samvatsara          # reading copy
+python3 tools/build_pdf.py --section upakramah,caitra-krtyam,vaisakha-krtyam,jyestha-krtyam,ashadha-krtyam,shravana-krtyam,bhadrapada-krtyam,ashvina-krtyam,kartika-krtyam,margashirsha-krtyam,pausha-krtyam,magha-krtyam,phalguna-krtyam,adhimasa,candrabda,sankranti,saurabda,savanabda,barhaspatya,nakshatra,kali --name sk-samvatsara-draft --draft
 python3 tools/build_pdf.py --script iast --name sk-iast   # optional IAST edition
 ```
 
