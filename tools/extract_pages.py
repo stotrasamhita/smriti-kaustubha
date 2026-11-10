@@ -27,7 +27,7 @@ FOOTNOTE = re.compile(rf"^{NUM}\s?[.']?\s*\S")
 
 # Scan → printed offset where the running head carries no legible number (checked on neighbours).
 # pp.150–151 are not in the scan: scan 168 is p.149 and scan 169 is p.152.
-OFFSETS = {s: 19 for s in range(104, 169)} | {s: 17 for s in range(169, 532)}  # checked on scan 104–531 (pp.85–514)
+OFFSETS = {s: 19 for s in range(104, 169)} | {s: 17 for s in range(169, 599)}  # checked on scan 104–598 (pp.85–581)
 
 
 def pages(text):
